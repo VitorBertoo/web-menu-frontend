@@ -1,31 +1,21 @@
-import { Suspense } from "react";
+import { notFound } from "next/navigation";
+import { MenuApp } from "@/features/menu/components/menu-app";
+import { loadPublicMenu } from "@/features/menu/data/get-public-menu";
 
-function MenuSkeleton() {
-  return (
-    <main className="mx-auto max-w-5xl p-margin">
-      <div className="h-10 w-1/3 animate-pulse rounded-md bg-surface-container" />
-      <div className="mt-space-sm h-5 w-2/3 animate-pulse rounded-md bg-surface-container" />
-    </main>
-  );
-}
+export const instant = false;
 
-async function MenuContent({ params }: { params: Promise<{ slug: string }> }) {
-  const { slug } = await params;
+type MenuPageProps = {
+  params: Promise<{ slug: string }>;
+  searchParams: Promise<{ table?: string }>;
+};
 
-  return (
-    <main className="mx-auto max-w-5xl p-margin">
-      <h1 className="font-display text-headline-xl text-on-surface">{slug}</h1>
-      <p className="mt-space-sm text-body-md text-on-surface-variant">
-        O cardápio de <strong>{slug}</strong> será carregado aqui.
-      </p>
-    </main>
-  );
-}
+export default async function MenuPage({ params, searchParams }: MenuPageProps) {
+  const [{ slug }, query] = await Promise.all([params, searchParams]);
 
-export default function MenuPage({ params }: { params: Promise<{ slug: string }> }) {
-  return (
-    <Suspense fallback={<MenuSkeleton />}>
-      <MenuContent params={params} />
-    </Suspense>
-  );
+  const menu = await loadPublicMenu(slug);
+  if (!menu) {
+    notFound();
+  }
+
+  return <MenuApp menu={menu} tableToken={query.table ?? null} />;
 }

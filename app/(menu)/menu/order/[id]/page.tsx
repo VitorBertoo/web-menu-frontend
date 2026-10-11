@@ -1,23 +1,13 @@
 import { Suspense } from "react";
+import { Skeleton } from "@/components/ui";
+import { OrderTracker } from "@/features/menu/components/order-tracker";
 
-function TrackingSkeleton() {
-  return (
-    <main className="mx-auto max-w-md p-margin">
-      <div className="h-8 w-1/2 animate-pulse rounded-md bg-surface-container" />
-      <div className="mt-space-sm h-5 w-3/4 animate-pulse rounded-md bg-surface-container" />
-    </main>
-  );
-}
-
-async function OrderTrackingContent({ params }: { params: Promise<{ id: string }> }) {
+async function OrderContent({ params }: { params: Promise<{ id: string }> }) {
   const { id } = await params;
 
   return (
-    <main className="mx-auto max-w-md p-margin">
-      <h1 className="font-display text-headline-lg text-on-surface">Acompanhar pedido</h1>
-      <p className="mt-space-sm text-body-md text-on-surface-variant">
-        Pedido <span className="tabular">{id}</span>
-      </p>
+    <main className="mx-auto w-full max-w-md p-margin pb-16">
+      <OrderTracker orderId={id} />
     </main>
   );
 }
@@ -28,8 +18,15 @@ export default function OrderTrackingPage({
   params: Promise<{ id: string }>;
 }) {
   return (
-    <Suspense fallback={<TrackingSkeleton />}>
-      <OrderTrackingContent params={params} />
+    <Suspense
+      fallback={
+        <div className="mx-auto flex w-full max-w-md flex-col gap-space-lg p-margin">
+          <Skeleton className="h-24 w-full" />
+          <Skeleton className="h-64 w-full" />
+        </div>
+      }
+    >
+      <OrderContent params={params} />
     </Suspense>
   );
 }

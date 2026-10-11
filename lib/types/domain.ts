@@ -163,3 +163,64 @@ export interface AdminUser {
   email: string;
   restaurantId: string;
 }
+
+export interface PublicRestaurant {
+  id: string;
+  name: string;
+  slug: string;
+  phone: string | null;
+  isOpen: boolean;
+  openingHours: OpeningHours | null;
+}
+
+export interface MenuCategory {
+  id: string;
+  name: string;
+  position: number;
+  products: Product[];
+}
+
+export interface PublicMenu {
+  restaurant: PublicRestaurant;
+  categories: MenuCategory[];
+  uncategorized: Product[];
+}
+
+export interface ResolveSessionResponse {
+  restaurant: Pick<PublicRestaurant, "id" | "name" | "slug" | "isOpen">;
+  table: { id: string; label: string };
+  session: { id: string; status: TableSessionStatus; openedAt: string };
+}
+
+export interface OrderItemInput {
+  productId: string;
+  quantity: number;
+  notes?: string | null;
+  components?: { componentId: string; quantity?: number }[];
+}
+
+interface CreateOrderBase {
+  slug: string;
+  notes?: string | null;
+  items: OrderItemInput[];
+}
+
+export interface DineInOrderInput extends CreateOrderBase {
+  type: "dine_in";
+  tableSessionId: string;
+}
+
+export interface PickupOrderInput extends CreateOrderBase {
+  type: "pickup";
+  customerName: string;
+  customerPhone: string;
+}
+
+export interface DeliveryOrderInput extends CreateOrderBase {
+  type: "delivery";
+  customerName: string;
+  customerPhone: string;
+  deliveryAddress: DeliveryAddress;
+}
+
+export type CreateOrderInput = DineInOrderInput | PickupOrderInput | DeliveryOrderInput;
