@@ -4,1519 +4,1478 @@
  */
 
 export interface paths {
-  "/health": {
-    parameters: {
-      query?: never;
-      header?: never;
-      path?: never;
-      cookie?: never;
+    "/health": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        get: operations["getHealth"];
+        put?: never;
+        post?: never;
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
     };
-    get: operations["getHealth"];
-    put?: never;
-    post?: never;
-    delete?: never;
-    options?: never;
-    head?: never;
-    patch?: never;
-    trace?: never;
-  };
-  "/admin/auth/login": {
-    parameters: {
-      query?: never;
-      header?: never;
-      path?: never;
-      cookie?: never;
+    "/admin/auth/login": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        get?: never;
+        put?: never;
+        /** Login do painel administrativo */
+        post: operations["postAdminAuthLogin"];
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
     };
-    get?: never;
-    put?: never;
-    /** Login do painel administrativo */
-    post: operations["postAdminAuthLogin"];
-    delete?: never;
-    options?: never;
-    head?: never;
-    patch?: never;
-    trace?: never;
-  };
-  "/admin/auth/me": {
-    parameters: {
-      query?: never;
-      header?: never;
-      path?: never;
-      cookie?: never;
+    "/admin/auth/me": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        /** Dados do administrador autenticado */
+        get: operations["getAdminAuthMe"];
+        put?: never;
+        post?: never;
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
     };
-    /** Dados do administrador autenticado */
-    get: operations["getAdminAuthMe"];
-    put?: never;
-    post?: never;
-    delete?: never;
-    options?: never;
-    head?: never;
-    patch?: never;
-    trace?: never;
-  };
-  "/admin/restaurant/": {
-    parameters: {
-      query?: never;
-      header?: never;
-      path?: never;
-      cookie?: never;
+    "/admin/restaurant/": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        get: operations["getAdminRestaurant"];
+        put?: never;
+        post?: never;
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch: operations["patchAdminRestaurant"];
+        trace?: never;
     };
-    get: operations["getAdminRestaurant"];
-    put?: never;
-    post?: never;
-    delete?: never;
-    options?: never;
-    head?: never;
-    patch: operations["patchAdminRestaurant"];
-    trace?: never;
-  };
-  "/admin/categories/": {
-    parameters: {
-      query?: never;
-      header?: never;
-      path?: never;
-      cookie?: never;
+    "/admin/categories/": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        get: operations["getAdminCategories"];
+        put?: never;
+        post: operations["postAdminCategories"];
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
     };
-    get: operations["getAdminCategories"];
-    put?: never;
-    post: operations["postAdminCategories"];
-    delete?: never;
-    options?: never;
-    head?: never;
-    patch?: never;
-    trace?: never;
-  };
-  "/admin/categories/{id}": {
-    parameters: {
-      query?: never;
-      header?: never;
-      path?: never;
-      cookie?: never;
+    "/admin/categories/{id}": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        get?: never;
+        put?: never;
+        post?: never;
+        delete: operations["deleteAdminCategoriesById"];
+        options?: never;
+        head?: never;
+        patch: operations["patchAdminCategoriesById"];
+        trace?: never;
     };
-    get?: never;
-    put?: never;
-    post?: never;
-    delete: operations["deleteAdminCategoriesById"];
-    options?: never;
-    head?: never;
-    patch: operations["patchAdminCategoriesById"];
-    trace?: never;
-  };
-  "/admin/products/": {
-    parameters: {
-      query?: never;
-      header?: never;
-      path?: never;
-      cookie?: never;
+    "/admin/products/": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        get: operations["getAdminProducts"];
+        put?: never;
+        post: operations["postAdminProducts"];
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
     };
-    get: operations["getAdminProducts"];
-    put?: never;
-    post: operations["postAdminProducts"];
-    delete?: never;
-    options?: never;
-    head?: never;
-    patch?: never;
-    trace?: never;
-  };
-  "/admin/products/{id}": {
-    parameters: {
-      query?: never;
-      header?: never;
-      path?: never;
-      cookie?: never;
+    "/admin/products/{id}": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        get: operations["getAdminProductsById"];
+        put?: never;
+        post?: never;
+        delete: operations["deleteAdminProductsById"];
+        options?: never;
+        head?: never;
+        patch: operations["patchAdminProductsById"];
+        trace?: never;
     };
-    get: operations["getAdminProductsById"];
-    put?: never;
-    post?: never;
-    delete: operations["deleteAdminProductsById"];
-    options?: never;
-    head?: never;
-    patch: operations["patchAdminProductsById"];
-    trace?: never;
-  };
-  "/admin/tables/": {
-    parameters: {
-      query?: never;
-      header?: never;
-      path?: never;
-      cookie?: never;
+    "/admin/tables/": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        get: operations["getAdminTables"];
+        put?: never;
+        post: operations["postAdminTables"];
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
     };
-    get: operations["getAdminTables"];
-    put?: never;
-    post: operations["postAdminTables"];
-    delete?: never;
-    options?: never;
-    head?: never;
-    patch?: never;
-    trace?: never;
-  };
-  "/admin/tables/{id}": {
-    parameters: {
-      query?: never;
-      header?: never;
-      path?: never;
-      cookie?: never;
+    "/admin/tables/{id}": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        get?: never;
+        put?: never;
+        post?: never;
+        delete: operations["deleteAdminTablesById"];
+        options?: never;
+        head?: never;
+        patch: operations["patchAdminTablesById"];
+        trace?: never;
     };
-    get?: never;
-    put?: never;
-    post?: never;
-    delete: operations["deleteAdminTablesById"];
-    options?: never;
-    head?: never;
-    patch: operations["patchAdminTablesById"];
-    trace?: never;
-  };
-  "/admin/tables/{id}/regenerate-token": {
-    parameters: {
-      query?: never;
-      header?: never;
-      path?: never;
-      cookie?: never;
+    "/admin/tables/{id}/regenerate-token": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        get?: never;
+        put?: never;
+        post: operations["postAdminTablesByIdRegenerate-token"];
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
     };
-    get?: never;
-    put?: never;
-    post: operations["postAdminTablesByIdRegenerate-token"];
-    delete?: never;
-    options?: never;
-    head?: never;
-    patch?: never;
-    trace?: never;
-  };
-  "/admin/sessions/open": {
-    parameters: {
-      query?: never;
-      header?: never;
-      path?: never;
-      cookie?: never;
+    "/admin/sessions/open": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        get: operations["getAdminSessionsOpen"];
+        put?: never;
+        post?: never;
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
     };
-    get: operations["getAdminSessionsOpen"];
-    put?: never;
-    post?: never;
-    delete?: never;
-    options?: never;
-    head?: never;
-    patch?: never;
-    trace?: never;
-  };
-  "/admin/sessions/{id}/close": {
-    parameters: {
-      query?: never;
-      header?: never;
-      path?: never;
-      cookie?: never;
+    "/admin/sessions/{id}/close": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        get?: never;
+        put?: never;
+        post: operations["postAdminSessionsByIdClose"];
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
     };
-    get?: never;
-    put?: never;
-    post: operations["postAdminSessionsByIdClose"];
-    delete?: never;
-    options?: never;
-    head?: never;
-    patch?: never;
-    trace?: never;
-  };
-  "/admin/orders/": {
-    parameters: {
-      query?: never;
-      header?: never;
-      path?: never;
-      cookie?: never;
+    "/admin/orders/": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        get: operations["getAdminOrders"];
+        put?: never;
+        post?: never;
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
     };
-    get: operations["getAdminOrders"];
-    put?: never;
-    post?: never;
-    delete?: never;
-    options?: never;
-    head?: never;
-    patch?: never;
-    trace?: never;
-  };
-  "/admin/orders/{id}": {
-    parameters: {
-      query?: never;
-      header?: never;
-      path?: never;
-      cookie?: never;
+    "/admin/orders/{id}": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        get: operations["getAdminOrdersById"];
+        put?: never;
+        post?: never;
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
     };
-    get: operations["getAdminOrdersById"];
-    put?: never;
-    post?: never;
-    delete?: never;
-    options?: never;
-    head?: never;
-    patch?: never;
-    trace?: never;
-  };
-  "/admin/orders/{id}/status": {
-    parameters: {
-      query?: never;
-      header?: never;
-      path?: never;
-      cookie?: never;
+    "/admin/orders/{id}/status": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        get?: never;
+        put?: never;
+        post?: never;
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch: operations["patchAdminOrdersByIdStatus"];
+        trace?: never;
     };
-    get?: never;
-    put?: never;
-    post?: never;
-    delete?: never;
-    options?: never;
-    head?: never;
-    patch: operations["patchAdminOrdersByIdStatus"];
-    trace?: never;
-  };
-  "/admin/orders/{id}/cancel": {
-    parameters: {
-      query?: never;
-      header?: never;
-      path?: never;
-      cookie?: never;
+    "/admin/orders/{id}/cancel": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        get?: never;
+        put?: never;
+        post: operations["postAdminOrdersByIdCancel"];
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
     };
-    get?: never;
-    put?: never;
-    post: operations["postAdminOrdersByIdCancel"];
-    delete?: never;
-    options?: never;
-    head?: never;
-    patch?: never;
-    trace?: never;
-  };
-  "/admin/dashboard/sales": {
-    parameters: {
-      query?: never;
-      header?: never;
-      path?: never;
-      cookie?: never;
+    "/admin/dashboard/sales": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        get: operations["getAdminDashboardSales"];
+        put?: never;
+        post?: never;
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
     };
-    get: operations["getAdminDashboardSales"];
-    put?: never;
-    post?: never;
-    delete?: never;
-    options?: never;
-    head?: never;
-    patch?: never;
-    trace?: never;
-  };
-  "/admin/dashboard/catalog": {
-    parameters: {
-      query?: never;
-      header?: never;
-      path?: never;
-      cookie?: never;
+    "/admin/dashboard/catalog": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        get: operations["getAdminDashboardCatalog"];
+        put?: never;
+        post?: never;
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
     };
-    get: operations["getAdminDashboardCatalog"];
-    put?: never;
-    post?: never;
-    delete?: never;
-    options?: never;
-    head?: never;
-    patch?: never;
-    trace?: never;
-  };
-  "/admin/dashboard/operations": {
-    parameters: {
-      query?: never;
-      header?: never;
-      path?: never;
-      cookie?: never;
+    "/admin/dashboard/operations": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        get: operations["getAdminDashboardOperations"];
+        put?: never;
+        post?: never;
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
     };
-    get: operations["getAdminDashboardOperations"];
-    put?: never;
-    post?: never;
-    delete?: never;
-    options?: never;
-    head?: never;
-    patch?: never;
-    trace?: never;
-  };
-  "/menu/{slug}": {
-    parameters: {
-      query?: never;
-      header?: never;
-      path?: never;
-      cookie?: never;
+    "/menu/{slug}": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        /** Cardápio público do restaurante por slug */
+        get: operations["getMenuBySlug"];
+        put?: never;
+        post?: never;
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
     };
-    /** Cardápio público do restaurante por slug */
-    get: operations["getMenuBySlug"];
-    put?: never;
-    post?: never;
-    delete?: never;
-    options?: never;
-    head?: never;
-    patch?: never;
-    trace?: never;
-  };
-  "/sessions/resolve": {
-    parameters: {
-      query?: never;
-      header?: never;
-      path?: never;
-      cookie?: never;
+    "/sessions/resolve": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        get?: never;
+        put?: never;
+        /** Resolve o QR code e abre/reutiliza a sessão da mesa */
+        post: operations["postSessionsResolve"];
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
     };
-    get?: never;
-    put?: never;
-    /** Resolve o QR code e abre/reutiliza a sessão da mesa */
-    post: operations["postSessionsResolve"];
-    delete?: never;
-    options?: never;
-    head?: never;
-    patch?: never;
-    trace?: never;
-  };
-  "/orders/": {
-    parameters: {
-      query?: never;
-      header?: never;
-      path?: never;
-      cookie?: never;
+    "/orders/": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        get?: never;
+        put?: never;
+        /** Cria um pedido (dine-in, pickup ou delivery) */
+        post: operations["postOrders"];
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
     };
-    get?: never;
-    put?: never;
-    /** Cria um pedido (dine-in, pickup ou delivery) */
-    post: operations["postOrders"];
-    delete?: never;
-    options?: never;
-    head?: never;
-    patch?: never;
-    trace?: never;
-  };
-  "/orders/{id}": {
-    parameters: {
-      query?: never;
-      header?: never;
-      path?: never;
-      cookie?: never;
+    "/orders/{id}": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        /** Acompanhamento público do pedido */
+        get: operations["getOrdersById"];
+        put?: never;
+        post?: never;
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
     };
-    /** Acompanhamento público do pedido */
-    get: operations["getOrdersById"];
-    put?: never;
-    post?: never;
-    delete?: never;
-    options?: never;
-    head?: never;
-    patch?: never;
-    trace?: never;
-  };
 }
 export type webhooks = Record<string, never>;
 export interface components {
-  schemas: never;
-  responses: never;
-  parameters: never;
-  requestBodies: never;
-  headers: never;
-  pathItems: never;
+    schemas: never;
+    responses: never;
+    parameters: never;
+    requestBodies: never;
+    headers: never;
+    pathItems: never;
 }
 export type $defs = Record<string, never>;
 export interface operations {
-  getHealth: {
-    parameters: {
-      query?: never;
-      header?: never;
-      path?: never;
-      cookie?: never;
-    };
-    requestBody?: never;
-    responses: {
-      200: {
-        headers: {
-          [name: string]: unknown;
+    getHealth: {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
         };
-        content?: never;
-      };
-    };
-  };
-  postAdminAuthLogin: {
-    parameters: {
-      query?: never;
-      header?: never;
-      path?: never;
-      cookie?: never;
-    };
-    requestBody: {
-      content: {
-        "application/json": {
-          /** Format: email */
-          email: string;
-          password: string;
-        };
-        "multipart/form-data": {
-          /** Format: email */
-          email: string;
-          password: string;
-        };
-        "text/plain": {
-          /** Format: email */
-          email: string;
-          password: string;
-        };
-      };
-    };
-    responses: {
-      200: {
-        headers: {
-          [name: string]: unknown;
-        };
-        content?: never;
-      };
-    };
-  };
-  getAdminAuthMe: {
-    parameters: {
-      query?: never;
-      header?: never;
-      path?: never;
-      cookie?: never;
-    };
-    requestBody?: never;
-    responses: {
-      200: {
-        headers: {
-          [name: string]: unknown;
-        };
-        content?: never;
-      };
-    };
-  };
-  getAdminRestaurant: {
-    parameters: {
-      query?: never;
-      header?: never;
-      path?: never;
-      cookie?: never;
-    };
-    requestBody?: never;
-    responses: {
-      200: {
-        headers: {
-          [name: string]: unknown;
-        };
-        content?: never;
-      };
-    };
-  };
-  patchAdminRestaurant: {
-    parameters: {
-      query?: never;
-      header?: never;
-      path?: never;
-      cookie?: never;
-    };
-    requestBody: {
-      content: {
-        "application/json": {
-          name?: string;
-          phone?: string | null;
-          isOpen?: boolean;
-          deliveryFee?: number;
-          openingHours?: {
-            [key: string]: string[][];
-          } | null;
-        };
-        "multipart/form-data": {
-          name?: string;
-          phone?: string | null;
-          isOpen?: boolean;
-          deliveryFee?: number;
-          openingHours?: {
-            [key: string]: string[][];
-          } | null;
-        };
-        "text/plain": {
-          name?: string;
-          phone?: string | null;
-          isOpen?: boolean;
-          deliveryFee?: number;
-          openingHours?: {
-            [key: string]: string[][];
-          } | null;
-        };
-      };
-    };
-    responses: {
-      200: {
-        headers: {
-          [name: string]: unknown;
-        };
-        content?: never;
-      };
-    };
-  };
-  getAdminCategories: {
-    parameters: {
-      query?: never;
-      header?: never;
-      path?: never;
-      cookie?: never;
-    };
-    requestBody?: never;
-    responses: {
-      200: {
-        headers: {
-          [name: string]: unknown;
-        };
-        content?: never;
-      };
-    };
-  };
-  postAdminCategories: {
-    parameters: {
-      query?: never;
-      header?: never;
-      path?: never;
-      cookie?: never;
-    };
-    requestBody: {
-      content: {
-        "application/json": {
-          name: string;
-          position?: string | number;
-        };
-        "multipart/form-data": {
-          name: string;
-          position?: string | number;
-        };
-        "text/plain": {
-          name: string;
-          position?: string | number;
-        };
-      };
-    };
-    responses: {
-      200: {
-        headers: {
-          [name: string]: unknown;
-        };
-        content?: never;
-      };
-    };
-  };
-  deleteAdminCategoriesById: {
-    parameters: {
-      query?: never;
-      header?: never;
-      path: {
-        id: string;
-      };
-      cookie?: never;
-    };
-    requestBody?: never;
-    responses: {
-      200: {
-        headers: {
-          [name: string]: unknown;
-        };
-        content?: never;
-      };
-    };
-  };
-  patchAdminCategoriesById: {
-    parameters: {
-      query?: never;
-      header?: never;
-      path: {
-        id: string;
-      };
-      cookie?: never;
-    };
-    requestBody: {
-      content: {
-        "application/json": {
-          name?: string;
-          position?: string | number;
-        };
-        "multipart/form-data": {
-          name?: string;
-          position?: string | number;
-        };
-        "text/plain": {
-          name?: string;
-          position?: string | number;
-        };
-      };
-    };
-    responses: {
-      200: {
-        headers: {
-          [name: string]: unknown;
-        };
-        content?: never;
-      };
-    };
-  };
-  getAdminProducts: {
-    parameters: {
-      query?: never;
-      header?: never;
-      path?: never;
-      cookie?: never;
-    };
-    requestBody?: never;
-    responses: {
-      200: {
-        headers: {
-          [name: string]: unknown;
-        };
-        content?: never;
-      };
-    };
-  };
-  postAdminProducts: {
-    parameters: {
-      query?: never;
-      header?: never;
-      path?: never;
-      cookie?: never;
-    };
-    requestBody: {
-      content: {
-        "application/json": {
-          name: string;
-          description?: string | null;
-          basePrice: number;
-          imageUrl?: string | null;
-          isAvailable?: boolean;
-          categoryIds?: string[];
-          componentGroups?: {
-            name: string;
-            minSelect?: string | number;
-            maxSelect?: string | number;
-            isRequired?: boolean;
-            position?: string | number;
-            components?: {
-              name: string;
-              priceDelta?: number;
-              isAvailable?: boolean;
-              position?: string | number;
-            }[];
-          }[];
-        };
-        "multipart/form-data": {
-          name: string;
-          description?: string | null;
-          basePrice: number;
-          imageUrl?: string | null;
-          isAvailable?: boolean;
-          categoryIds?: string[];
-          componentGroups?: {
-            name: string;
-            minSelect?: string | number;
-            maxSelect?: string | number;
-            isRequired?: boolean;
-            position?: string | number;
-            components?: {
-              name: string;
-              priceDelta?: number;
-              isAvailable?: boolean;
-              position?: string | number;
-            }[];
-          }[];
-        };
-        "text/plain": {
-          name: string;
-          description?: string | null;
-          basePrice: number;
-          imageUrl?: string | null;
-          isAvailable?: boolean;
-          categoryIds?: string[];
-          componentGroups?: {
-            name: string;
-            minSelect?: string | number;
-            maxSelect?: string | number;
-            isRequired?: boolean;
-            position?: string | number;
-            components?: {
-              name: string;
-              priceDelta?: number;
-              isAvailable?: boolean;
-              position?: string | number;
-            }[];
-          }[];
-        };
-      };
-    };
-    responses: {
-      200: {
-        headers: {
-          [name: string]: unknown;
-        };
-        content?: never;
-      };
-    };
-  };
-  getAdminProductsById: {
-    parameters: {
-      query?: never;
-      header?: never;
-      path: {
-        id: string;
-      };
-      cookie?: never;
-    };
-    requestBody?: never;
-    responses: {
-      200: {
-        headers: {
-          [name: string]: unknown;
-        };
-        content?: never;
-      };
-    };
-  };
-  deleteAdminProductsById: {
-    parameters: {
-      query?: never;
-      header?: never;
-      path: {
-        id: string;
-      };
-      cookie?: never;
-    };
-    requestBody?: never;
-    responses: {
-      200: {
-        headers: {
-          [name: string]: unknown;
-        };
-        content?: never;
-      };
-    };
-  };
-  patchAdminProductsById: {
-    parameters: {
-      query?: never;
-      header?: never;
-      path: {
-        id: string;
-      };
-      cookie?: never;
-    };
-    requestBody: {
-      content: {
-        "application/json": {
-          name?: string;
-          description?: string | null;
-          basePrice?: number;
-          imageUrl?: string | null;
-          isAvailable?: boolean;
-          categoryIds?: string[];
-          componentGroups?: {
-            name: string;
-            minSelect?: string | number;
-            maxSelect?: string | number;
-            isRequired?: boolean;
-            position?: string | number;
-            components?: {
-              name: string;
-              priceDelta?: number;
-              isAvailable?: boolean;
-              position?: string | number;
-            }[];
-          }[];
-        };
-        "multipart/form-data": {
-          name?: string;
-          description?: string | null;
-          basePrice?: number;
-          imageUrl?: string | null;
-          isAvailable?: boolean;
-          categoryIds?: string[];
-          componentGroups?: {
-            name: string;
-            minSelect?: string | number;
-            maxSelect?: string | number;
-            isRequired?: boolean;
-            position?: string | number;
-            components?: {
-              name: string;
-              priceDelta?: number;
-              isAvailable?: boolean;
-              position?: string | number;
-            }[];
-          }[];
-        };
-        "text/plain": {
-          name?: string;
-          description?: string | null;
-          basePrice?: number;
-          imageUrl?: string | null;
-          isAvailable?: boolean;
-          categoryIds?: string[];
-          componentGroups?: {
-            name: string;
-            minSelect?: string | number;
-            maxSelect?: string | number;
-            isRequired?: boolean;
-            position?: string | number;
-            components?: {
-              name: string;
-              priceDelta?: number;
-              isAvailable?: boolean;
-              position?: string | number;
-            }[];
-          }[];
-        };
-      };
-    };
-    responses: {
-      200: {
-        headers: {
-          [name: string]: unknown;
-        };
-        content?: never;
-      };
-    };
-  };
-  getAdminTables: {
-    parameters: {
-      query?: never;
-      header?: never;
-      path?: never;
-      cookie?: never;
-    };
-    requestBody?: never;
-    responses: {
-      200: {
-        headers: {
-          [name: string]: unknown;
-        };
-        content?: never;
-      };
-    };
-  };
-  postAdminTables: {
-    parameters: {
-      query?: never;
-      header?: never;
-      path?: never;
-      cookie?: never;
-    };
-    requestBody: {
-      content: {
-        "application/json": {
-          label: string;
-          isActive?: boolean;
-        };
-        "multipart/form-data": {
-          label: string;
-          isActive?: boolean;
-        };
-        "text/plain": {
-          label: string;
-          isActive?: boolean;
-        };
-      };
-    };
-    responses: {
-      200: {
-        headers: {
-          [name: string]: unknown;
-        };
-        content?: never;
-      };
-    };
-  };
-  deleteAdminTablesById: {
-    parameters: {
-      query?: never;
-      header?: never;
-      path: {
-        id: string;
-      };
-      cookie?: never;
-    };
-    requestBody?: never;
-    responses: {
-      200: {
-        headers: {
-          [name: string]: unknown;
-        };
-        content?: never;
-      };
-    };
-  };
-  patchAdminTablesById: {
-    parameters: {
-      query?: never;
-      header?: never;
-      path: {
-        id: string;
-      };
-      cookie?: never;
-    };
-    requestBody: {
-      content: {
-        "application/json": {
-          label?: string;
-          isActive?: boolean;
-        };
-        "multipart/form-data": {
-          label?: string;
-          isActive?: boolean;
-        };
-        "text/plain": {
-          label?: string;
-          isActive?: boolean;
-        };
-      };
-    };
-    responses: {
-      200: {
-        headers: {
-          [name: string]: unknown;
-        };
-        content?: never;
-      };
-    };
-  };
-  "postAdminTablesByIdRegenerate-token": {
-    parameters: {
-      query?: never;
-      header?: never;
-      path: {
-        id: string;
-      };
-      cookie?: never;
-    };
-    requestBody?: never;
-    responses: {
-      200: {
-        headers: {
-          [name: string]: unknown;
-        };
-        content?: never;
-      };
-    };
-  };
-  getAdminSessionsOpen: {
-    parameters: {
-      query?: never;
-      header?: never;
-      path?: never;
-      cookie?: never;
-    };
-    requestBody?: never;
-    responses: {
-      200: {
-        headers: {
-          [name: string]: unknown;
-        };
-        content?: never;
-      };
-    };
-  };
-  postAdminSessionsByIdClose: {
-    parameters: {
-      query?: never;
-      header?: never;
-      path: {
-        id: string;
-      };
-      cookie?: never;
-    };
-    requestBody?: never;
-    responses: {
-      200: {
-        headers: {
-          [name: string]: unknown;
-        };
-        content?: never;
-      };
-    };
-  };
-  getAdminOrders: {
-    parameters: {
-      query?: {
-        status?:
-          | "pending"
-          | "confirmed"
-          | "preparing"
-          | "ready"
-          | "out_for_delivery"
-          | "delivered"
-          | "completed"
-          | "canceled";
-        type?: "dine_in" | "pickup" | "delivery";
-        from?: string;
-        to?: string;
-        page?: string | number;
-        pageSize?: string | number;
-      };
-      header?: never;
-      path?: never;
-      cookie?: never;
-    };
-    requestBody?: never;
-    responses: {
-      200: {
-        headers: {
-          [name: string]: unknown;
-        };
-        content?: never;
-      };
-    };
-  };
-  getAdminOrdersById: {
-    parameters: {
-      query?: never;
-      header?: never;
-      path: {
-        id: string;
-      };
-      cookie?: never;
-    };
-    requestBody?: never;
-    responses: {
-      200: {
-        headers: {
-          [name: string]: unknown;
-        };
-        content?: never;
-      };
-    };
-  };
-  patchAdminOrdersByIdStatus: {
-    parameters: {
-      query?: never;
-      header?: never;
-      path: {
-        id: string;
-      };
-      cookie?: never;
-    };
-    requestBody: {
-      content: {
-        "application/json": {
-          status:
-            | "pending"
-            | "confirmed"
-            | "preparing"
-            | "ready"
-            | "out_for_delivery"
-            | "delivered"
-            | "completed"
-            | "canceled";
-          note?: string | null;
-        };
-        "multipart/form-data": {
-          status:
-            | "pending"
-            | "confirmed"
-            | "preparing"
-            | "ready"
-            | "out_for_delivery"
-            | "delivered"
-            | "completed"
-            | "canceled";
-          note?: string | null;
-        };
-        "text/plain": {
-          status:
-            | "pending"
-            | "confirmed"
-            | "preparing"
-            | "ready"
-            | "out_for_delivery"
-            | "delivered"
-            | "completed"
-            | "canceled";
-          note?: string | null;
-        };
-      };
-    };
-    responses: {
-      200: {
-        headers: {
-          [name: string]: unknown;
-        };
-        content?: never;
-      };
-    };
-  };
-  postAdminOrdersByIdCancel: {
-    parameters: {
-      query?: never;
-      header?: never;
-      path: {
-        id: string;
-      };
-      cookie?: never;
-    };
-    requestBody: {
-      content: {
-        "application/json": {
-          note?: string | null;
-        };
-        "multipart/form-data": {
-          note?: string | null;
-        };
-        "text/plain": {
-          note?: string | null;
-        };
-      };
-    };
-    responses: {
-      200: {
-        headers: {
-          [name: string]: unknown;
-        };
-        content?: never;
-      };
-    };
-  };
-  getAdminDashboardSales: {
-    parameters: {
-      query?: {
-        from?: string;
-        to?: string;
-      };
-      header?: never;
-      path?: never;
-      cookie?: never;
-    };
-    requestBody?: never;
-    responses: {
-      200: {
-        headers: {
-          [name: string]: unknown;
-        };
-        content?: never;
-      };
-    };
-  };
-  getAdminDashboardCatalog: {
-    parameters: {
-      query?: {
-        from?: string;
-        to?: string;
-        limit?: string | number;
-      };
-      header?: never;
-      path?: never;
-      cookie?: never;
-    };
-    requestBody?: never;
-    responses: {
-      200: {
-        headers: {
-          [name: string]: unknown;
-        };
-        content?: never;
-      };
-    };
-  };
-  getAdminDashboardOperations: {
-    parameters: {
-      query?: {
-        from?: string;
-        to?: string;
-      };
-      header?: never;
-      path?: never;
-      cookie?: never;
-    };
-    requestBody?: never;
-    responses: {
-      200: {
-        headers: {
-          [name: string]: unknown;
-        };
-        content?: never;
-      };
-    };
-  };
-  getMenuBySlug: {
-    parameters: {
-      query?: never;
-      header?: never;
-      path: {
-        slug: string;
-      };
-      cookie?: never;
-    };
-    requestBody?: never;
-    responses: {
-      200: {
-        headers: {
-          [name: string]: unknown;
-        };
-        content?: never;
-      };
-    };
-  };
-  postSessionsResolve: {
-    parameters: {
-      query?: never;
-      header?: never;
-      path?: never;
-      cookie?: never;
-    };
-    requestBody: {
-      content: {
-        "application/json": {
-          qrToken: string;
-        };
-        "multipart/form-data": {
-          qrToken: string;
-        };
-        "text/plain": {
-          qrToken: string;
-        };
-      };
-    };
-    responses: {
-      200: {
-        headers: {
-          [name: string]: unknown;
-        };
-        content?: never;
-      };
-    };
-  };
-  postOrders: {
-    parameters: {
-      query?: never;
-      header?: never;
-      path?: never;
-      cookie?: never;
-    };
-    requestBody: {
-      content: {
-        "application/json":
-          | {
-              /** @constant */
-              type: "dine_in";
-              slug: string;
-              notes?: string | null;
-              items: {
-                /** Format: uuid */
-                productId: string;
-                quantity: string | number;
-                notes?: string | null;
-                components?: {
-                  /** Format: uuid */
-                  componentId: string;
-                  quantity?: string | number;
-                }[];
-              }[];
-              /** Format: uuid */
-              tableSessionId: string;
-            }
-          | {
-              /** @constant */
-              type: "pickup";
-              slug: string;
-              notes?: string | null;
-              items: {
-                /** Format: uuid */
-                productId: string;
-                quantity: string | number;
-                notes?: string | null;
-                components?: {
-                  /** Format: uuid */
-                  componentId: string;
-                  quantity?: string | number;
-                }[];
-              }[];
-              customerName: string;
-              customerPhone: string;
-            }
-          | {
-              /** @constant */
-              type: "delivery";
-              slug: string;
-              notes?: string | null;
-              items: {
-                /** Format: uuid */
-                productId: string;
-                quantity: string | number;
-                notes?: string | null;
-                components?: {
-                  /** Format: uuid */
-                  componentId: string;
-                  quantity?: string | number;
-                }[];
-              }[];
-              customerName: string;
-              customerPhone: string;
-              deliveryAddress: {
-                street: string;
-                number: string;
-                complement?: string;
-                neighborhood: string;
-                city: string;
-                state: string;
-                zipcode: string;
-                lat?: number;
-                lng?: number;
-                reference?: string;
-              };
+        requestBody?: never;
+        responses: {
+            200: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content?: never;
             };
-        "multipart/form-data":
-          | {
-              /** @constant */
-              type: "dine_in";
-              slug: string;
-              notes?: string | null;
-              items: {
-                /** Format: uuid */
-                productId: string;
-                quantity: string | number;
-                notes?: string | null;
-                components?: {
-                  /** Format: uuid */
-                  componentId: string;
-                  quantity?: string | number;
-                }[];
-              }[];
-              /** Format: uuid */
-              tableSessionId: string;
-            }
-          | {
-              /** @constant */
-              type: "pickup";
-              slug: string;
-              notes?: string | null;
-              items: {
-                /** Format: uuid */
-                productId: string;
-                quantity: string | number;
-                notes?: string | null;
-                components?: {
-                  /** Format: uuid */
-                  componentId: string;
-                  quantity?: string | number;
-                }[];
-              }[];
-              customerName: string;
-              customerPhone: string;
-            }
-          | {
-              /** @constant */
-              type: "delivery";
-              slug: string;
-              notes?: string | null;
-              items: {
-                /** Format: uuid */
-                productId: string;
-                quantity: string | number;
-                notes?: string | null;
-                components?: {
-                  /** Format: uuid */
-                  componentId: string;
-                  quantity?: string | number;
-                }[];
-              }[];
-              customerName: string;
-              customerPhone: string;
-              deliveryAddress: {
-                street: string;
-                number: string;
-                complement?: string;
-                neighborhood: string;
-                city: string;
-                state: string;
-                zipcode: string;
-                lat?: number;
-                lng?: number;
-                reference?: string;
-              };
-            };
-        "text/plain":
-          | {
-              /** @constant */
-              type: "dine_in";
-              slug: string;
-              notes?: string | null;
-              items: {
-                /** Format: uuid */
-                productId: string;
-                quantity: string | number;
-                notes?: string | null;
-                components?: {
-                  /** Format: uuid */
-                  componentId: string;
-                  quantity?: string | number;
-                }[];
-              }[];
-              /** Format: uuid */
-              tableSessionId: string;
-            }
-          | {
-              /** @constant */
-              type: "pickup";
-              slug: string;
-              notes?: string | null;
-              items: {
-                /** Format: uuid */
-                productId: string;
-                quantity: string | number;
-                notes?: string | null;
-                components?: {
-                  /** Format: uuid */
-                  componentId: string;
-                  quantity?: string | number;
-                }[];
-              }[];
-              customerName: string;
-              customerPhone: string;
-            }
-          | {
-              /** @constant */
-              type: "delivery";
-              slug: string;
-              notes?: string | null;
-              items: {
-                /** Format: uuid */
-                productId: string;
-                quantity: string | number;
-                notes?: string | null;
-                components?: {
-                  /** Format: uuid */
-                  componentId: string;
-                  quantity?: string | number;
-                }[];
-              }[];
-              customerName: string;
-              customerPhone: string;
-              deliveryAddress: {
-                street: string;
-                number: string;
-                complement?: string;
-                neighborhood: string;
-                city: string;
-                state: string;
-                zipcode: string;
-                lat?: number;
-                lng?: number;
-                reference?: string;
-              };
-            };
-      };
-    };
-    responses: {
-      200: {
-        headers: {
-          [name: string]: unknown;
         };
-        content?: never;
-      };
     };
-  };
-  getOrdersById: {
-    parameters: {
-      query?: never;
-      header?: never;
-      path: {
-        id: string;
-      };
-      cookie?: never;
-    };
-    requestBody?: never;
-    responses: {
-      200: {
-        headers: {
-          [name: string]: unknown;
+    postAdminAuthLogin: {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
         };
-        content?: never;
-      };
+        requestBody: {
+            content: {
+                "application/json": {
+                    /** Format: email */
+                    email: string;
+                    password: string;
+                };
+                "multipart/form-data": {
+                    /** Format: email */
+                    email: string;
+                    password: string;
+                };
+                "text/plain": {
+                    /** Format: email */
+                    email: string;
+                    password: string;
+                };
+            };
+        };
+        responses: {
+            200: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content?: never;
+            };
+        };
     };
-  };
+    getAdminAuthMe: {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        requestBody?: never;
+        responses: {
+            200: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content?: never;
+            };
+        };
+    };
+    getAdminRestaurant: {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        requestBody?: never;
+        responses: {
+            200: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content?: never;
+            };
+        };
+    };
+    patchAdminRestaurant: {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        requestBody: {
+            content: {
+                "application/json": {
+                    name?: string;
+                    phone?: string | null;
+                    isOpen?: boolean;
+                    deliveryFee?: number;
+                    openingHours?: {
+                        [key: string]: string[][];
+                    } | null;
+                };
+                "multipart/form-data": {
+                    name?: string;
+                    phone?: string | null;
+                    isOpen?: boolean;
+                    deliveryFee?: number;
+                    openingHours?: {
+                        [key: string]: string[][];
+                    } | null;
+                };
+                "text/plain": {
+                    name?: string;
+                    phone?: string | null;
+                    isOpen?: boolean;
+                    deliveryFee?: number;
+                    openingHours?: {
+                        [key: string]: string[][];
+                    } | null;
+                };
+            };
+        };
+        responses: {
+            200: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content?: never;
+            };
+        };
+    };
+    getAdminCategories: {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        requestBody?: never;
+        responses: {
+            200: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content?: never;
+            };
+        };
+    };
+    postAdminCategories: {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        requestBody: {
+            content: {
+                "application/json": {
+                    name: string;
+                    position?: string | number;
+                };
+                "multipart/form-data": {
+                    name: string;
+                    position?: string | number;
+                };
+                "text/plain": {
+                    name: string;
+                    position?: string | number;
+                };
+            };
+        };
+        responses: {
+            200: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content?: never;
+            };
+        };
+    };
+    deleteAdminCategoriesById: {
+        parameters: {
+            query?: never;
+            header?: never;
+            path: {
+                id: string;
+            };
+            cookie?: never;
+        };
+        requestBody?: never;
+        responses: {
+            200: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content?: never;
+            };
+        };
+    };
+    patchAdminCategoriesById: {
+        parameters: {
+            query?: never;
+            header?: never;
+            path: {
+                id: string;
+            };
+            cookie?: never;
+        };
+        requestBody: {
+            content: {
+                "application/json": {
+                    name?: string;
+                    position?: string | number;
+                };
+                "multipart/form-data": {
+                    name?: string;
+                    position?: string | number;
+                };
+                "text/plain": {
+                    name?: string;
+                    position?: string | number;
+                };
+            };
+        };
+        responses: {
+            200: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content?: never;
+            };
+        };
+    };
+    getAdminProducts: {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        requestBody?: never;
+        responses: {
+            200: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content?: never;
+            };
+        };
+    };
+    postAdminProducts: {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        requestBody: {
+            content: {
+                "application/json": {
+                    name: string;
+                    description?: string | null;
+                    basePrice: number;
+                    imageUrl?: string | null;
+                    isAvailable?: boolean;
+                    categoryIds?: string[];
+                    componentGroups?: {
+                        name: string;
+                        minSelect?: string | number;
+                        maxSelect?: string | number;
+                        isRequired?: boolean;
+                        position?: string | number;
+                        components?: {
+                            name: string;
+                            priceDelta?: number;
+                            isAvailable?: boolean;
+                            position?: string | number;
+                        }[];
+                    }[];
+                };
+                "multipart/form-data": {
+                    name: string;
+                    description?: string | null;
+                    basePrice: number;
+                    imageUrl?: string | null;
+                    isAvailable?: boolean;
+                    categoryIds?: string[];
+                    componentGroups?: {
+                        name: string;
+                        minSelect?: string | number;
+                        maxSelect?: string | number;
+                        isRequired?: boolean;
+                        position?: string | number;
+                        components?: {
+                            name: string;
+                            priceDelta?: number;
+                            isAvailable?: boolean;
+                            position?: string | number;
+                        }[];
+                    }[];
+                };
+                "text/plain": {
+                    name: string;
+                    description?: string | null;
+                    basePrice: number;
+                    imageUrl?: string | null;
+                    isAvailable?: boolean;
+                    categoryIds?: string[];
+                    componentGroups?: {
+                        name: string;
+                        minSelect?: string | number;
+                        maxSelect?: string | number;
+                        isRequired?: boolean;
+                        position?: string | number;
+                        components?: {
+                            name: string;
+                            priceDelta?: number;
+                            isAvailable?: boolean;
+                            position?: string | number;
+                        }[];
+                    }[];
+                };
+            };
+        };
+        responses: {
+            200: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content?: never;
+            };
+        };
+    };
+    getAdminProductsById: {
+        parameters: {
+            query?: never;
+            header?: never;
+            path: {
+                id: string;
+            };
+            cookie?: never;
+        };
+        requestBody?: never;
+        responses: {
+            200: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content?: never;
+            };
+        };
+    };
+    deleteAdminProductsById: {
+        parameters: {
+            query?: never;
+            header?: never;
+            path: {
+                id: string;
+            };
+            cookie?: never;
+        };
+        requestBody?: never;
+        responses: {
+            200: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content?: never;
+            };
+        };
+    };
+    patchAdminProductsById: {
+        parameters: {
+            query?: never;
+            header?: never;
+            path: {
+                id: string;
+            };
+            cookie?: never;
+        };
+        requestBody: {
+            content: {
+                "application/json": {
+                    name?: string;
+                    description?: string | null;
+                    basePrice?: number;
+                    imageUrl?: string | null;
+                    isAvailable?: boolean;
+                    categoryIds?: string[];
+                    componentGroups?: {
+                        name: string;
+                        minSelect?: string | number;
+                        maxSelect?: string | number;
+                        isRequired?: boolean;
+                        position?: string | number;
+                        components?: {
+                            name: string;
+                            priceDelta?: number;
+                            isAvailable?: boolean;
+                            position?: string | number;
+                        }[];
+                    }[];
+                };
+                "multipart/form-data": {
+                    name?: string;
+                    description?: string | null;
+                    basePrice?: number;
+                    imageUrl?: string | null;
+                    isAvailable?: boolean;
+                    categoryIds?: string[];
+                    componentGroups?: {
+                        name: string;
+                        minSelect?: string | number;
+                        maxSelect?: string | number;
+                        isRequired?: boolean;
+                        position?: string | number;
+                        components?: {
+                            name: string;
+                            priceDelta?: number;
+                            isAvailable?: boolean;
+                            position?: string | number;
+                        }[];
+                    }[];
+                };
+                "text/plain": {
+                    name?: string;
+                    description?: string | null;
+                    basePrice?: number;
+                    imageUrl?: string | null;
+                    isAvailable?: boolean;
+                    categoryIds?: string[];
+                    componentGroups?: {
+                        name: string;
+                        minSelect?: string | number;
+                        maxSelect?: string | number;
+                        isRequired?: boolean;
+                        position?: string | number;
+                        components?: {
+                            name: string;
+                            priceDelta?: number;
+                            isAvailable?: boolean;
+                            position?: string | number;
+                        }[];
+                    }[];
+                };
+            };
+        };
+        responses: {
+            200: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content?: never;
+            };
+        };
+    };
+    getAdminTables: {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        requestBody?: never;
+        responses: {
+            200: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content?: never;
+            };
+        };
+    };
+    postAdminTables: {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        requestBody: {
+            content: {
+                "application/json": {
+                    label: string;
+                    isActive?: boolean;
+                };
+                "multipart/form-data": {
+                    label: string;
+                    isActive?: boolean;
+                };
+                "text/plain": {
+                    label: string;
+                    isActive?: boolean;
+                };
+            };
+        };
+        responses: {
+            200: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content?: never;
+            };
+        };
+    };
+    deleteAdminTablesById: {
+        parameters: {
+            query?: never;
+            header?: never;
+            path: {
+                id: string;
+            };
+            cookie?: never;
+        };
+        requestBody?: never;
+        responses: {
+            200: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content?: never;
+            };
+        };
+    };
+    patchAdminTablesById: {
+        parameters: {
+            query?: never;
+            header?: never;
+            path: {
+                id: string;
+            };
+            cookie?: never;
+        };
+        requestBody: {
+            content: {
+                "application/json": {
+                    label?: string;
+                    isActive?: boolean;
+                };
+                "multipart/form-data": {
+                    label?: string;
+                    isActive?: boolean;
+                };
+                "text/plain": {
+                    label?: string;
+                    isActive?: boolean;
+                };
+            };
+        };
+        responses: {
+            200: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content?: never;
+            };
+        };
+    };
+    "postAdminTablesByIdRegenerate-token": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path: {
+                id: string;
+            };
+            cookie?: never;
+        };
+        requestBody?: never;
+        responses: {
+            200: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content?: never;
+            };
+        };
+    };
+    getAdminSessionsOpen: {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        requestBody?: never;
+        responses: {
+            200: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content?: never;
+            };
+        };
+    };
+    postAdminSessionsByIdClose: {
+        parameters: {
+            query?: never;
+            header?: never;
+            path: {
+                id: string;
+            };
+            cookie?: never;
+        };
+        requestBody?: never;
+        responses: {
+            200: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content?: never;
+            };
+        };
+    };
+    getAdminOrders: {
+        parameters: {
+            query?: {
+                status?: "pending" | "confirmed" | "preparing" | "ready" | "out_for_delivery" | "delivered" | "completed" | "canceled";
+                type?: "dine_in" | "pickup" | "delivery";
+                from?: string;
+                to?: string;
+                page?: string | number;
+                pageSize?: string | number;
+            };
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        requestBody?: never;
+        responses: {
+            200: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content?: never;
+            };
+        };
+    };
+    getAdminOrdersById: {
+        parameters: {
+            query?: never;
+            header?: never;
+            path: {
+                id: string;
+            };
+            cookie?: never;
+        };
+        requestBody?: never;
+        responses: {
+            200: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content?: never;
+            };
+        };
+    };
+    patchAdminOrdersByIdStatus: {
+        parameters: {
+            query?: never;
+            header?: never;
+            path: {
+                id: string;
+            };
+            cookie?: never;
+        };
+        requestBody: {
+            content: {
+                "application/json": {
+                    status: "pending" | "confirmed" | "preparing" | "ready" | "out_for_delivery" | "delivered" | "completed" | "canceled";
+                    note?: string | null;
+                };
+                "multipart/form-data": {
+                    status: "pending" | "confirmed" | "preparing" | "ready" | "out_for_delivery" | "delivered" | "completed" | "canceled";
+                    note?: string | null;
+                };
+                "text/plain": {
+                    status: "pending" | "confirmed" | "preparing" | "ready" | "out_for_delivery" | "delivered" | "completed" | "canceled";
+                    note?: string | null;
+                };
+            };
+        };
+        responses: {
+            200: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content?: never;
+            };
+        };
+    };
+    postAdminOrdersByIdCancel: {
+        parameters: {
+            query?: never;
+            header?: never;
+            path: {
+                id: string;
+            };
+            cookie?: never;
+        };
+        requestBody: {
+            content: {
+                "application/json": {
+                    note?: string | null;
+                };
+                "multipart/form-data": {
+                    note?: string | null;
+                };
+                "text/plain": {
+                    note?: string | null;
+                };
+            };
+        };
+        responses: {
+            200: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content?: never;
+            };
+        };
+    };
+    getAdminDashboardSales: {
+        parameters: {
+            query?: {
+                from?: string;
+                to?: string;
+            };
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        requestBody?: never;
+        responses: {
+            200: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content?: never;
+            };
+        };
+    };
+    getAdminDashboardCatalog: {
+        parameters: {
+            query?: {
+                from?: string;
+                to?: string;
+                limit?: string | number;
+            };
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        requestBody?: never;
+        responses: {
+            200: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content?: never;
+            };
+        };
+    };
+    getAdminDashboardOperations: {
+        parameters: {
+            query?: {
+                from?: string;
+                to?: string;
+            };
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        requestBody?: never;
+        responses: {
+            200: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content?: never;
+            };
+        };
+    };
+    getMenuBySlug: {
+        parameters: {
+            query?: never;
+            header?: never;
+            path: {
+                slug: string;
+            };
+            cookie?: never;
+        };
+        requestBody?: never;
+        responses: {
+            200: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content?: never;
+            };
+        };
+    };
+    postSessionsResolve: {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        requestBody: {
+            content: {
+                "application/json": {
+                    qrToken: string;
+                };
+                "multipart/form-data": {
+                    qrToken: string;
+                };
+                "text/plain": {
+                    qrToken: string;
+                };
+            };
+        };
+        responses: {
+            200: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content?: never;
+            };
+        };
+    };
+    postOrders: {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        requestBody: {
+            content: {
+                "application/json": {
+                    /** @constant */
+                    type: "dine_in";
+                    slug: string;
+                    notes?: string | null;
+                    items: {
+                        /** Format: uuid */
+                        productId: string;
+                        quantity: string | number;
+                        notes?: string | null;
+                        components?: {
+                            /** Format: uuid */
+                            componentId: string;
+                            quantity?: string | number;
+                        }[];
+                    }[];
+                    /** Format: uuid */
+                    tableSessionId: string;
+                } | {
+                    /** @constant */
+                    type: "pickup";
+                    slug: string;
+                    notes?: string | null;
+                    items: {
+                        /** Format: uuid */
+                        productId: string;
+                        quantity: string | number;
+                        notes?: string | null;
+                        components?: {
+                            /** Format: uuid */
+                            componentId: string;
+                            quantity?: string | number;
+                        }[];
+                    }[];
+                    customerName: string;
+                    customerPhone: string;
+                } | {
+                    /** @constant */
+                    type: "delivery";
+                    slug: string;
+                    notes?: string | null;
+                    items: {
+                        /** Format: uuid */
+                        productId: string;
+                        quantity: string | number;
+                        notes?: string | null;
+                        components?: {
+                            /** Format: uuid */
+                            componentId: string;
+                            quantity?: string | number;
+                        }[];
+                    }[];
+                    customerName: string;
+                    customerPhone: string;
+                    deliveryAddress: {
+                        street: string;
+                        number: string;
+                        complement?: string;
+                        neighborhood: string;
+                        city: string;
+                        state: string;
+                        zipcode: string;
+                        lat?: number;
+                        lng?: number;
+                        reference?: string;
+                    };
+                };
+                "multipart/form-data": {
+                    /** @constant */
+                    type: "dine_in";
+                    slug: string;
+                    notes?: string | null;
+                    items: {
+                        /** Format: uuid */
+                        productId: string;
+                        quantity: string | number;
+                        notes?: string | null;
+                        components?: {
+                            /** Format: uuid */
+                            componentId: string;
+                            quantity?: string | number;
+                        }[];
+                    }[];
+                    /** Format: uuid */
+                    tableSessionId: string;
+                } | {
+                    /** @constant */
+                    type: "pickup";
+                    slug: string;
+                    notes?: string | null;
+                    items: {
+                        /** Format: uuid */
+                        productId: string;
+                        quantity: string | number;
+                        notes?: string | null;
+                        components?: {
+                            /** Format: uuid */
+                            componentId: string;
+                            quantity?: string | number;
+                        }[];
+                    }[];
+                    customerName: string;
+                    customerPhone: string;
+                } | {
+                    /** @constant */
+                    type: "delivery";
+                    slug: string;
+                    notes?: string | null;
+                    items: {
+                        /** Format: uuid */
+                        productId: string;
+                        quantity: string | number;
+                        notes?: string | null;
+                        components?: {
+                            /** Format: uuid */
+                            componentId: string;
+                            quantity?: string | number;
+                        }[];
+                    }[];
+                    customerName: string;
+                    customerPhone: string;
+                    deliveryAddress: {
+                        street: string;
+                        number: string;
+                        complement?: string;
+                        neighborhood: string;
+                        city: string;
+                        state: string;
+                        zipcode: string;
+                        lat?: number;
+                        lng?: number;
+                        reference?: string;
+                    };
+                };
+                "text/plain": {
+                    /** @constant */
+                    type: "dine_in";
+                    slug: string;
+                    notes?: string | null;
+                    items: {
+                        /** Format: uuid */
+                        productId: string;
+                        quantity: string | number;
+                        notes?: string | null;
+                        components?: {
+                            /** Format: uuid */
+                            componentId: string;
+                            quantity?: string | number;
+                        }[];
+                    }[];
+                    /** Format: uuid */
+                    tableSessionId: string;
+                } | {
+                    /** @constant */
+                    type: "pickup";
+                    slug: string;
+                    notes?: string | null;
+                    items: {
+                        /** Format: uuid */
+                        productId: string;
+                        quantity: string | number;
+                        notes?: string | null;
+                        components?: {
+                            /** Format: uuid */
+                            componentId: string;
+                            quantity?: string | number;
+                        }[];
+                    }[];
+                    customerName: string;
+                    customerPhone: string;
+                } | {
+                    /** @constant */
+                    type: "delivery";
+                    slug: string;
+                    notes?: string | null;
+                    items: {
+                        /** Format: uuid */
+                        productId: string;
+                        quantity: string | number;
+                        notes?: string | null;
+                        components?: {
+                            /** Format: uuid */
+                            componentId: string;
+                            quantity?: string | number;
+                        }[];
+                    }[];
+                    customerName: string;
+                    customerPhone: string;
+                    deliveryAddress: {
+                        street: string;
+                        number: string;
+                        complement?: string;
+                        neighborhood: string;
+                        city: string;
+                        state: string;
+                        zipcode: string;
+                        lat?: number;
+                        lng?: number;
+                        reference?: string;
+                    };
+                };
+            };
+        };
+        responses: {
+            200: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content?: never;
+            };
+        };
+    };
+    getOrdersById: {
+        parameters: {
+            query?: never;
+            header?: never;
+            path: {
+                id: string;
+            };
+            cookie?: never;
+        };
+        requestBody?: never;
+        responses: {
+            200: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content?: never;
+            };
+        };
+    };
 }
