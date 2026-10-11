@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_tab" name="shell-type"/><style>@layer base{html,body{width:100vw;margin:0;padding:0;}body{overscroll-behavior:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&amp;family=Plus+Jakarta+Sans:wght@600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { colors: { "on-tertiary-container": "#fffbff", "inverse-surface": "#263143", "tertiary-container": "#b15f00", "on-primary-fixed-variant": "#7f2b00", "on-surface-variant": "#5a4138", "error": "#ba1a1a", "outline-variant": "#e2bfb2", "surface-dim": "#cfdaf2", "primary-fixed-dim": "#ffb599", "on-primary": "#ffffff", "on-surface": "#111c2d", "on-tertiary-fixed-variant": "#6e3900", "tertiary-fixed-dim": "#ffb77d", "inverse-on-surface": "#ecf1ff", "surface-container-lowest": "#ffffff", "on-secondary-container": "#5c2400", "secondary-fixed-dim": "#ffb690", "on-primary-fixed": "#370e00", "on-error": "#ffffff", "background": "#f9f9ff", "surface-bright": "#f9f9ff", "inverse-primary": "#ffb599", "on-secondary": "#ffffff", "on-secondary-fixed-variant": "#783200", "secondary-fixed": "#ffdbca", "secondary": "#9d4300", "tertiary": "#8d4b00", "surface-container-highest": "#d8e3fb", "on-tertiary": "#ffffff", "surface-container": "#e7eeff", "primary-container": "#cc4900", "outline": "#8e7166", "on-tertiary-fixed": "#2f1500", "on-secondary-fixed": "#341100", "error-container": "#ffdad6", "on-error-container": "#93000a", "tertiary-fixed": "#ffdcc3", "surface-container-low": "#f0f3ff", "primary-fixed": "#ffdbce", "on-primary-container": "#fffbff", "on-background": "#111c2d", "surface-variant": "#d8e3fb", "surface": "#f9f9ff", "secondary-container": "#fd761a", "surface-container-high": "#dee8ff", "surface-tint": "#a73a00", "primary": "#a33900" }, borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, spacing: { "margin": "1rem", "space-xs": "0.25rem", "space-2xl": "3rem", "space-2xs": "0.125rem", "gutter-desktop": "1.5rem", "space-md": "1rem", "margin-tablet": "1.5rem", "margin-desktop": "2.5rem", "gutter": "1rem", "space-sm": "0.5rem", "space-xl": "2rem", "space-lg": "1.5rem" }, fontFamily: { "headline-lg": ["Plus Jakarta Sans"], "headline-xl-mobile": ["Plus Jakarta Sans"], "body-sm": ["Inter"], "headline-md": ["Plus Jakarta Sans"], "body-md": ["Inter"], "label-md": ["Inter"], "headline-xl": ["Plus Jakarta Sans"], "headline-sm": ["Plus Jakarta Sans"], "label-lg": ["Inter"], "label-sm": ["Inter"], "body-lg": ["Inter"], "price-display": ["Plus Jakarta Sans"], "headline-lg-mobile": ["Plus Jakarta Sans"] }, fontSize: { "headline-lg": ["32px", { lineHeight: "40px", fontWeight: "700" }], "headline-xl-mobile": ["30px", { lineHeight: "36px", fontWeight: "800" }], "body-sm": ["12px", { lineHeight: "16px", fontWeight: "400" }], "headline-md": ["24px", { lineHeight: "32px", fontWeight: "700" }], "body-md": ["14px", { lineHeight: "20px", fontWeight: "400" }], "label-md": ["12px", { lineHeight: "16px", fontWeight: "600" }], "headline-xl": ["40px", { lineHeight: "48px", fontWeight: "800" }], "headline-sm": ["18px", { lineHeight: "24px", fontWeight: "600" }], "label-lg": ["14px", { lineHeight: "20px", fontWeight: "600" }], "label-sm": ["11px", { lineHeight: "14px", letterSpacing: "0.025em", fontWeight: "600" }], "body-lg": ["16px", { lineHeight: "24px", fontWeight: "400" }], "price-display": ["20px", { lineHeight: "24px", fontWeight: "700" }], "headline-lg-mobile": ["24px", { lineHeight: "32px", fontWeight: "700" }] } } } }</script></head><body class="bg-surface font-body-md text-on-surface flex flex-col min-h-screen"><header class="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-xl pt-safe shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-16 px-margin flex items-center justify-between gap-space-sm"><div class="flex items-center gap-space-xs"><div class="w-9 h-9 rounded-lg bg-primary flex items-center justify-center text-on-primary shadow-sm"><span class="material-symbols-outlined text-[20px]">restaurant_menu</span></div><div class="flex flex-col"><span class="font-headline-sm text-headline-sm text-on-surface tracking-tight leading-none">GastroMenu</span><span class="font-label-sm text-label-sm text-primary font-bold tracking-wider uppercase">POS &amp; Digital</span></div></div><div class="flex items-center gap-space-sm"><div class="flex items-center gap-space-2xs px-space-sm py-1 rounded-full bg-surface-container-high text-on-surface"><span class="material-symbols-outlined text-primary text-[16px]">table_restaurant</span><span class="font-label-sm text-label-sm font-semibold">Mesa 08</span></div><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="flex flex-col relative w-full pt-16 pb-24 bg-surface min-h-screen"><div class="flex flex-col w-full pb-8">
+<!-- Top Utility Context Bar -->
+<section class="px-margin pt-space-md flex flex-col gap-space-sm">
+<div class="flex items-center justify-between gap-space-xs">
+<div class="flex items-center gap-space-xs bg-surface-container-high px-space-sm py-1.5 rounded-full shadow-sm">
+<span class="material-symbols-outlined text-primary text-[18px]">store</span>
+<span class="font-label-sm text-label-sm text-on-surface font-semibold tracking-tight">Bistrô Central • Almoço</span>
+<span class="material-symbols-outlined text-outline text-[16px]">expand_more</span>
+</div>
+<button class="flex items-center gap-1 bg-primary text-on-primary px-space-sm py-1.5 rounded-lg shadow-md active:scale-95 transition-transform" id="btn-novo-grupo" type="button">
+<span class="material-symbols-outlined text-[18px]">add</span>
+<span class="font-label-sm text-label-sm font-bold">Novo Grupo</span>
+</button>
+</div>
+<div class="flex flex-col mt-space-xs">
+<div class="flex items-center gap-space-xs">
+<span class="font-headline-lg-mobile text-headline-lg-mobile text-on-surface font-extrabold tracking-tight">Categorias &amp; Modificadores</span>
+<span class="bg-secondary-container text-on-secondary-container px-2 py-0.5 rounded-full font-label-sm text-label-sm font-bold">POS v2.4</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Configure visibilidade no salão, regras de complementos e fluxo KDS.</p>
+</div>
+<!-- Mini KPI Banner de Rentabilidade -->
+<div class="relative overflow-hidden rounded-xl bg-gradient-to-r from-surface-container-high via-surface-container to-surface-container-highest p-space-sm flex items-center justify-between shadow-sm">
+<div class="flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded-lg bg-tertiary-container text-on-tertiary-container flex items-center justify-center shadow-inner">
+<span class="material-symbols-outlined text-[22px]">trending_up</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant">Rentabilidade de Adicionais</span>
+<div class="flex items-baseline gap-1">
+<span class="font-price-display text-price-display text-primary font-extrabold">+R$ 8.420</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">/ este mês</span>
+</div>
+</div>
+</div>
+<div class="flex items-center text-primary bg-primary-fixed px-2 py-1 rounded-full">
+<span class="material-symbols-outlined text-[14px]">arrow_upward</span>
+<span class="font-label-sm text-label-sm font-bold ml-0.5">18.4%</span>
+</div>
+</div>
+<!-- Pill Tabs Switcher -->
+<div class="flex bg-surface-container-high p-1 rounded-xl shadow-inner mt-space-2xs">
+<button class="flex-1 py-2 rounded-lg font-label-md text-label-md font-bold transition-all flex items-center justify-center gap-1.5 bg-surface-container-lowest text-primary shadow-sm" id="tab-categorias-btn" type="button">
+<span class="material-symbols-outlined text-[18px]">category</span>
+<span>Categorias (5)</span>
+</button>
+<button class="flex-1 py-2 rounded-lg font-label-md text-label-md font-bold transition-all flex items-center justify-center gap-1.5 text-on-surface-variant hover:text-on-surface" id="tab-modificadores-btn" type="button">
+<span class="material-symbols-outlined text-[18px]">rule</span>
+<span>Modificadores (14)</span>
+</button>
+</div>
+</section>
+<!-- TAB 1: CATEGORIAS VIEW -->
+<section class="px-margin flex flex-col gap-space-sm mt-space-sm" id="view-categorias">
+<div class="flex items-center justify-between text-on-surface-variant">
+<span class="font-label-sm text-label-sm uppercase font-bold tracking-wider">Ordenação &amp; Disponibilidade</span>
+<span class="font-label-sm text-label-sm">4 ativas • 1 pausada</span>
+</div>
+<!-- Category 1 -->
+<div class="bg-surface-container-lowest rounded-xl p-space-sm flex flex-col gap-space-xs shadow-sm hover:shadow-md transition-shadow">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-sm min-w-0">
+<div class="w-11 h-11 rounded-lg bg-surface-container flex items-center justify-center text-primary flex-shrink-0">
+<span class="material-symbols-outlined text-[24px]">lunch_dining</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-headline-sm text-headline-sm text-on-surface font-bold truncate leading-tight">Lanches Artesanais</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">18 itens cadastrados</span>
+</div>
+</div>
+<div class="flex items-center gap-space-xs flex-shrink-0">
+<button class="w-11 h-6 rounded-full bg-primary flex items-center px-0.5 transition-colors cursor-pointer" onclick="toggleSwitch(this)" type="button">
+<span class="w-5 h-5 rounded-full bg-surface-container-lowest shadow transform translate-x-5 transition-transform"></span>
+</button>
+</div>
+</div>
+<div class="flex items-center justify-between pt-space-xs mt-space-2xs bg-surface-container-low px-space-sm py-1.5 rounded-lg text-on-surface-variant">
+<div class="flex items-center gap-1 font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[16px] text-primary">schedule</span>
+<span>11:30 - 23:30 (Seg - Dom)</span>
+</div>
+<div class="flex items-center gap-1 text-on-surface">
+<span class="font-label-sm text-label-sm font-semibold">9 KDS Ativos</span>
+<span class="material-symbols-outlined text-[16px] text-outline">drag_indicator</span>
+</div>
+</div>
+</div>
+<!-- Category 2 -->
+<div class="bg-surface-container-lowest rounded-xl p-space-sm flex flex-col gap-space-xs shadow-sm hover:shadow-md transition-shadow">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-sm min-w-0">
+<div class="w-11 h-11 rounded-lg bg-surface-container flex items-center justify-center text-secondary flex-shrink-0">
+<span class="material-symbols-outlined text-[24px]">dinner_dining</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-headline-sm text-headline-sm text-on-surface font-bold truncate leading-tight">Pratos Executivos</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">12 opções individuais</span>
+</div>
+</div>
+<div class="flex items-center gap-space-xs flex-shrink-0">
+<button class="w-11 h-6 rounded-full bg-primary flex items-center px-0.5 transition-colors cursor-pointer" onclick="toggleSwitch(this)" type="button">
+<span class="w-5 h-5 rounded-full bg-surface-container-lowest shadow transform translate-x-5 transition-transform"></span>
+</button>
+</div>
+</div>
+<div class="flex items-center justify-between pt-space-xs mt-space-2xs bg-surface-container-low px-space-sm py-1.5 rounded-lg text-on-surface-variant">
+<div class="flex items-center gap-1 font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[16px] text-primary">schedule</span>
+<span>11:30 - 15:30 (Seg - Sex)</span>
+</div>
+<div class="flex items-center gap-1 text-on-surface">
+<span class="font-label-sm text-label-sm font-semibold">Menu Almoço</span>
+<span class="material-symbols-outlined text-[16px] text-outline">drag_indicator</span>
+</div>
+</div>
+</div>
+<!-- Category 3 -->
+<div class="bg-surface-container-lowest rounded-xl p-space-sm flex flex-col gap-space-xs shadow-sm hover:shadow-md transition-shadow">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-sm min-w-0">
+<div class="w-11 h-11 rounded-lg bg-surface-container flex items-center justify-center text-tertiary flex-shrink-0">
+<span class="material-symbols-outlined text-[24px]">tapas</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-headline-sm text-headline-sm text-on-surface font-bold truncate leading-tight">Porções &amp; Aperitivos</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">14 itens para compartilhar</span>
+</div>
+</div>
+<div class="flex items-center gap-space-xs flex-shrink-0">
+<button class="w-11 h-6 rounded-full bg-primary flex items-center px-0.5 transition-colors cursor-pointer" onclick="toggleSwitch(this)" type="button">
+<span class="w-5 h-5 rounded-full bg-surface-container-lowest shadow transform translate-x-5 transition-transform"></span>
+</button>
+</div>
+</div>
+<div class="flex items-center justify-between pt-space-xs mt-space-2xs bg-surface-container-low px-space-sm py-1.5 rounded-lg text-on-surface-variant">
+<div class="flex items-center gap-1 font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[16px] text-primary">schedule</span>
+<span>16:00 - 00:00 (Ter - Dom)</span>
+</div>
+<div class="flex items-center gap-1 text-on-surface">
+<span class="font-label-sm text-label-sm font-semibold">Happy Hour</span>
+<span class="material-symbols-outlined text-[16px] text-outline">drag_indicator</span>
+</div>
+</div>
+</div>
+<!-- Category 4 -->
+<div class="bg-surface-container-lowest rounded-xl p-space-sm flex flex-col gap-space-xs shadow-sm hover:shadow-md transition-shadow">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-sm min-w-0">
+<div class="w-11 h-11 rounded-lg bg-surface-container flex items-center justify-center text-primary flex-shrink-0">
+<span class="material-symbols-outlined text-[24px]">local_bar</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-headline-sm text-headline-sm text-on-surface font-bold truncate leading-tight">Bebidas &amp; Drinks</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">26 drinks e sucos</span>
+</div>
+</div>
+<div class="flex items-center gap-space-xs flex-shrink-0">
+<button class="w-11 h-6 rounded-full bg-primary flex items-center px-0.5 transition-colors cursor-pointer" onclick="toggleSwitch(this)" type="button">
+<span class="w-5 h-5 rounded-full bg-surface-container-lowest shadow transform translate-x-5 transition-transform"></span>
+</button>
+</div>
+</div>
+<div class="flex items-center justify-between pt-space-xs mt-space-2xs bg-surface-container-low px-space-sm py-1.5 rounded-lg text-on-surface-variant">
+<div class="flex items-center gap-1 font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[16px] text-primary">schedule</span>
+<span>Tempo Integral</span>
+</div>
+<div class="flex items-center gap-1 text-on-surface">
+<span class="font-label-sm text-label-sm font-semibold">Bar Central</span>
+<span class="material-symbols-outlined text-[16px] text-outline">drag_indicator</span>
+</div>
+</div>
+</div>
+<!-- Category 5 (Pausada) -->
+<div class="bg-surface-container-lowest rounded-xl p-space-sm flex flex-col gap-space-xs shadow-sm opacity-75">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-sm min-w-0">
+<div class="w-11 h-11 rounded-lg bg-surface-container-high flex items-center justify-center text-outline flex-shrink-0">
+<span class="material-symbols-outlined text-[24px]">icecream</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-headline-sm text-headline-sm text-on-surface font-bold truncate leading-tight">Sobremesas da Estação</span>
+<span class="font-body-sm text-body-sm text-error font-medium">Temporariamente Indisponível</span>
+</div>
+</div>
+<div class="flex items-center gap-space-xs flex-shrink-0">
+<button class="w-11 h-6 rounded-full bg-surface-container-highest flex items-center px-0.5 transition-colors cursor-pointer" onclick="toggleSwitch(this)" type="button">
+<span class="w-5 h-5 rounded-full bg-surface-container-lowest shadow transform translate-x-0 transition-transform"></span>
+</button>
+</div>
+</div>
+<div class="flex items-center justify-between pt-space-xs mt-space-2xs bg-surface-container-low px-space-sm py-1.5 rounded-lg text-on-surface-variant">
+<div class="flex items-center gap-1 font-label-sm text-label-sm text-on-surface-variant">
+<span class="material-symbols-outlined text-[16px]">pause_circle</span>
+<span>Retorna no cardápio de jantar</span>
+</div>
+<span class="font-label-sm text-label-sm font-bold text-outline">Inativa</span>
+</div>
+</div>
+</section>
+<!-- TAB 2: GRUPOS DE MODIFICADORES VIEW -->
+<section class="px-margin flex flex-col gap-space-sm mt-space-sm hidden" id="view-modificadores">
+<div class="flex items-center justify-between text-on-surface-variant">
+<span class="font-label-sm text-label-sm uppercase font-bold tracking-wider">Regras de Seleção &amp; Vínculos</span>
+<span class="font-label-sm text-label-sm font-medium">Toque para expandir</span>
+</div>
+<!-- Modifier Group 1: REQUERIDO -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm overflow-hidden transition-all duration-200">
+<div class="p-space-sm flex flex-col gap-space-xs cursor-pointer" onclick="toggleGroupAccordion('group-pao', 'chevron-pao')">
+<div class="flex items-start justify-between gap-space-xs">
+<div class="flex flex-wrap items-center gap-space-xs">
+<span class="bg-inverse-surface text-inverse-on-surface px-2 py-0.5 rounded font-label-sm text-label-sm font-extrabold uppercase tracking-wider">Requerido</span>
+<span class="bg-surface-container-high text-on-surface px-2 py-0.5 rounded-full font-label-sm text-label-sm font-semibold">Mín 1 • Máx 1</span>
+</div>
+<span class="material-symbols-outlined text-outline transition-transform duration-200" id="chevron-pao">expand_more</span>
+</div>
+<div class="flex items-baseline justify-between mt-1">
+<span class="font-headline-sm text-headline-sm text-on-surface font-bold">Escolha do Pão</span>
+<span class="font-label-sm text-label-sm text-primary font-bold">3 opções</span>
+</div>
+<div class="flex items-center gap-space-xs text-on-surface-variant font-label-sm text-label-sm">
+<span class="flex items-center gap-0.5 text-secondary"><span class="material-symbols-outlined text-[14px]">check_circle</span> Ativo no Cardápio</span>
+<span>•</span>
+<span class="flex items-center gap-0.5"><span class="material-symbols-outlined text-[14px]">soup_kitchen</span> Enviar ao KDS</span>
+</div>
+</div>
+<!-- Expanded Content -->
+<div class="px-space-sm pb-space-sm flex flex-col gap-space-xs pt-space-xs bg-surface-container-low" id="group-pao">
+<div class="flex items-center justify-between p-2 rounded-lg bg-surface-container-lowest shadow-2xs">
+<div class="flex items-center gap-space-sm">
+<div class="w-4 h-4 rounded-full bg-primary flex items-center justify-center">
+<span class="w-1.5 h-1.5 rounded-full bg-on-primary"></span>
+</div>
+<span class="font-body-md text-body-md text-on-surface font-semibold">Brioche Amanteigado</span>
+</div>
+<span class="font-label-sm text-label-sm font-bold text-on-surface-variant">Incluso (R$ 0,00)</span>
+</div>
+<div class="flex items-center justify-between p-2 rounded-lg bg-surface-container-lowest shadow-2xs">
+<div class="flex items-center gap-space-sm">
+<div class="w-4 h-4 rounded-full bg-surface-container-highest"></div>
+<span class="font-body-md text-body-md text-on-surface font-semibold">Pão Australiano c/ Mel</span>
+</div>
+<span class="font-label-sm text-label-sm font-bold text-primary">+ R$ 2,50</span>
+</div>
+<div class="flex items-center justify-between p-2 rounded-lg bg-surface-container-lowest shadow-2xs">
+<div class="flex items-center gap-space-sm">
+<div class="w-4 h-4 rounded-full bg-surface-container-highest"></div>
+<span class="font-body-md text-body-md text-on-surface font-semibold">Sem Glúten Funcional</span>
+</div>
+<span class="font-label-sm text-label-sm font-bold text-primary">+ R$ 4,00</span>
+</div>
+<div class="flex items-center justify-end gap-space-xs pt-1">
+<button class="text-on-surface-variant font-label-sm text-label-sm flex items-center gap-1 hover:text-on-surface px-2 py-1" type="button">
+<span class="material-symbols-outlined text-[16px]">edit</span> Editar Opções
+          </button>
+</div>
+</div>
+</div>
+<!-- Modifier Group 2: OPCIONAL (Turbine seu Lanche) -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm overflow-hidden transition-all duration-200">
+<div class="p-space-sm flex flex-col gap-space-xs cursor-pointer" onclick="toggleGroupAccordion('group-turbine', 'chevron-turbine')">
+<div class="flex items-start justify-between gap-space-xs">
+<div class="flex flex-wrap items-center gap-space-xs">
+<span class="bg-tertiary-fixed text-on-tertiary-fixed px-2 py-0.5 rounded font-label-sm text-label-sm font-extrabold uppercase tracking-wider">Opcional</span>
+<span class="bg-surface-container-high text-on-surface px-2 py-0.5 rounded-full font-label-sm text-label-sm font-semibold">Mín 0 • Máx 6</span>
+</div>
+<span class="material-symbols-outlined text-outline transition-transform duration-200 rotate-180" id="chevron-turbine">expand_more</span>
+</div>
+<div class="flex items-baseline justify-between mt-1">
+<span class="font-headline-sm text-headline-sm text-on-surface font-bold">Turbine seu Lanche (Bacon, Queijos)</span>
+<span class="font-label-sm text-label-sm text-primary font-bold">6 adicionais</span>
+</div>
+<div class="flex items-center gap-space-xs text-on-surface-variant font-label-sm text-label-sm">
+<span class="flex items-center gap-0.5 text-secondary"><span class="material-symbols-outlined text-[14px]">bolt</span> Alto Impacto de Ticket Médio</span>
+</div>
+</div>
+<!-- Expanded Content Default Open -->
+<div class="px-space-sm pb-space-sm flex flex-col gap-space-xs pt-space-xs bg-surface-container-low" id="group-turbine">
+<div class="flex items-center justify-between p-2 rounded-lg bg-surface-container-lowest shadow-2xs">
+<div class="flex items-center gap-space-sm">
+<div class="w-4 h-4 rounded bg-primary flex items-center justify-center text-on-primary">
+<span class="material-symbols-outlined text-[12px]">check</span>
+</div>
+<div class="flex flex-col">
+<span class="font-body-md text-body-md text-on-surface font-semibold leading-tight">Bacon Crocante em Fatias</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Dose dupla defumada</span>
+</div>
+</div>
+<span class="font-label-sm text-label-sm font-bold text-primary">+ R$ 5,00</span>
+</div>
+<div class="flex items-center justify-between p-2 rounded-lg bg-surface-container-lowest shadow-2xs">
+<div class="flex items-center gap-space-sm">
+<div class="w-4 h-4 rounded bg-surface-container-highest"></div>
+<div class="flex flex-col">
+<span class="font-body-md text-body-md text-on-surface font-semibold leading-tight">Cheddar Melt Cremoso</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Receita inglesa exclusiva</span>
+</div>
+</div>
+<span class="font-label-sm text-label-sm font-bold text-primary">+ R$ 4,50</span>
+</div>
+<div class="flex items-center justify-between p-2 rounded-lg bg-surface-container-lowest shadow-2xs">
+<div class="flex items-center gap-space-sm">
+<div class="w-4 h-4 rounded bg-surface-container-highest"></div>
+<div class="flex flex-col">
+<span class="font-body-md text-body-md text-on-surface font-semibold leading-tight">Maionese Trufada da Casa</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Pote extra 45ml</span>
+</div>
+</div>
+<span class="font-label-sm text-label-sm font-bold text-primary">+ R$ 4,00</span>
+</div>
+<div class="flex items-center justify-between pt-1">
+<button class="text-primary font-label-sm text-label-sm font-bold flex items-center gap-1 hover:underline" type="button">
+<span class="material-symbols-outlined text-[16px]">add_circle</span> Adicionar Opção
+          </button>
+<span class="font-label-sm text-label-sm text-on-surface-variant">+3 outros itens</span>
+</div>
+</div>
+</div>
+<!-- Modifier Group 3: OPCIONAL C/ DESCONTO -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm overflow-hidden transition-all duration-200">
+<div class="p-space-sm flex flex-col gap-space-xs cursor-pointer" onclick="toggleGroupAccordion('group-bebidas', 'chevron-bebidas')">
+<div class="flex items-start justify-between gap-space-xs">
+<div class="flex flex-wrap items-center gap-space-xs">
+<span class="bg-primary-fixed text-on-primary-fixed font-extrabold uppercase px-2 py-0.5 rounded font-label-sm text-label-sm tracking-wider">Opcional c/ Desconto</span>
+<span class="bg-surface-container-high text-on-surface px-2 py-0.5 rounded-full font-label-sm text-label-sm font-semibold">Mín 0 • Máx 2</span>
+</div>
+<span class="material-symbols-outlined text-outline transition-transform duration-200" id="chevron-bebidas">expand_more</span>
+</div>
+<div class="flex items-baseline justify-between mt-1">
+<span class="font-headline-sm text-headline-sm text-on-surface font-bold">Bebidas no Combo</span>
+<span class="font-label-sm text-label-sm text-primary font-bold">4 opções</span>
+</div>
+<div class="flex items-center gap-space-xs text-on-surface-variant font-label-sm text-label-sm">
+<span class="flex items-center gap-0.5 text-secondary"><span class="material-symbols-outlined text-[14px]">sell</span> Preço Promocional Vinculado</span>
+</div>
+</div>
+<div class="px-space-sm pb-space-sm flex flex-col gap-space-xs pt-space-xs bg-surface-container-low hidden" id="group-bebidas">
+<div class="flex items-center justify-between p-2 rounded-lg bg-surface-container-lowest shadow-2xs">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-[18px] text-primary">local_drink</span>
+<span class="font-body-md text-body-md text-on-surface font-semibold">Refrigerante Lata 350ml</span>
+</div>
+<div class="flex items-baseline gap-1">
+<span class="font-label-sm text-label-sm line-through text-outline">R$ 8,00</span>
+<span class="font-label-sm text-label-sm font-bold text-primary">+ R$ 5,00</span>
+</div>
+</div>
+<div class="flex items-center justify-between p-2 rounded-lg bg-surface-container-lowest shadow-2xs">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-[18px] text-primary">water_drop</span>
+<span class="font-body-md text-body-md text-on-surface font-semibold">Suco Natural de Laranja 400ml</span>
+</div>
+<div class="flex items-baseline gap-1">
+<span class="font-label-sm text-label-sm line-through text-outline">R$ 12,00</span>
+<span class="font-label-sm text-label-sm font-bold text-primary">+ R$ 8,50</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Modifier Group 4: OPCIONAL (Nível de Pimenta) -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm overflow-hidden transition-all duration-200">
+<div class="p-space-sm flex flex-col gap-space-xs cursor-pointer" onclick="toggleGroupAccordion('group-pimenta', 'chevron-pimenta')">
+<div class="flex items-start justify-between gap-space-xs">
+<div class="flex flex-wrap items-center gap-space-xs">
+<span class="bg-tertiary-fixed text-on-tertiary-fixed px-2 py-0.5 rounded font-label-sm text-label-sm font-extrabold uppercase tracking-wider">Opcional</span>
+<span class="bg-surface-container-high text-on-surface px-2 py-0.5 rounded-full font-label-sm text-label-sm font-semibold">Mín 0 • Máx 1</span>
+</div>
+<span class="material-symbols-outlined text-outline transition-transform duration-200" id="chevron-pimenta">expand_more</span>
+</div>
+<div class="flex items-baseline justify-between mt-1">
+<span class="font-headline-sm text-headline-sm text-on-surface font-bold">Nível de Pimenta</span>
+<span class="font-label-sm text-label-sm text-primary font-bold">4 níveis</span>
+</div>
+<div class="flex items-center gap-space-xs text-on-surface-variant font-label-sm text-label-sm">
+<span class="flex items-center gap-0.5 text-on-surface-variant"><span class="material-symbols-outlined text-[14px]">soup_kitchen</span> Instrução Direta à Cozinha</span>
+</div>
+</div>
+<div class="px-space-sm pb-space-sm flex flex-col gap-space-xs pt-space-xs bg-surface-container-low hidden" id="group-pimenta">
+<div class="flex items-center justify-between p-2 rounded-lg bg-surface-container-lowest shadow-2xs">
+<span class="font-body-md text-body-md text-on-surface font-semibold">Sem Pimenta (Kids / Suave)</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-medium">Grátis</span>
+</div>
+<div class="flex items-center justify-between p-2 rounded-lg bg-surface-container-lowest shadow-2xs">
+<span class="font-body-md text-body-md text-on-surface font-semibold">Pimenta Média (Jalapeño)</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-medium">Grátis</span>
+</div>
+<div class="flex items-center justify-between p-2 rounded-lg bg-surface-container-lowest shadow-2xs">
+<span class="font-body-md text-body-md text-on-surface font-semibold">Pimenta Alta (Habanero House)</span>
+<span class="font-label-sm text-label-sm text-primary font-bold">+ R$ 1,50</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Floating Toast Feedback for Quick Changes -->
+<div class="fixed bottom-20 left-1/2 transform -translate-x-1/2 bg-inverse-surface text-inverse-on-surface px-space-md py-2 rounded-full shadow-lg flex items-center gap-space-xs text-label-md font-label-md opacity-0 pointer-events-none transition-opacity duration-300 z-40" id="toast-quick-update">
+<span class="material-symbols-outlined text-secondary text-[18px]">cloud_done</span>
+<span>Cardápio atualizado no POS e Mesas</span>
+</div>
+</div>
+<script>
+  // Tab Switching Logic
+  const tabCatBtn = document.getElementById('tab-categorias-btn');
+  const tabModBtn = document.getElementById('tab-modificadores-btn');
+  const viewCat = document.getElementById('view-categorias');
+  const viewMod = document.getElementById('view-modificadores');
+
+  tabCatBtn.addEventListener('click', () => {
+    tabCatBtn.className = 'flex-1 py-2 rounded-lg font-label-md text-label-md font-bold transition-all flex items-center justify-center gap-1.5 bg-surface-container-lowest text-primary shadow-sm';
+    tabModBtn.className = 'flex-1 py-2 rounded-lg font-label-md text-label-md font-bold transition-all flex items-center justify-center gap-1.5 text-on-surface-variant hover:text-on-surface';
+    viewCat.classList.remove('hidden');
+    viewMod.classList.add('hidden');
+  });
+
+  tabModBtn.addEventListener('click', () => {
+    tabModBtn.className = 'flex-1 py-2 rounded-lg font-label-md text-label-md font-bold transition-all flex items-center justify-center gap-1.5 bg-surface-container-lowest text-primary shadow-sm';
+    tabCatBtn.className = 'flex-1 py-2 rounded-lg font-label-md text-label-md font-bold transition-all flex items-center justify-center gap-1.5 text-on-surface-variant hover:text-on-surface';
+    viewMod.classList.remove('hidden');
+    viewCat.classList.add('hidden');
+  });
+
+  // Accordion Toggle Logic
+  window.toggleGroupAccordion = function(contentId, chevronId) {
+    const el = document.getElementById(contentId);
+    const chev = document.getElementById(chevronId);
+    if (!el || !chev) return;
+    
+    if (el.classList.contains('hidden')) {
+      el.classList.remove('hidden');
+      chev.classList.add('rotate-180');
+    } else {
+      el.classList.add('hidden');
+      chev.classList.remove('rotate-180');
+    }
+  };
+
+  // Quick Availability Switch Toggle
+  window.toggleSwitch = function(btn) {
+    const knob = btn.firstElementChild;
+    const isChecked = knob.classList.contains('translate-x-5');
+    
+    if (isChecked) {
+      knob.classList.remove('translate-x-5');
+      knob.classList.add('translate-x-0');
+      btn.classList.remove('bg-primary');
+      btn.classList.add('bg-surface-container-highest');
+    } else {
+      knob.classList.remove('translate-x-0');
+      knob.classList.add('translate-x-5');
+      btn.classList.remove('bg-surface-container-highest');
+      btn.classList.add('bg-primary');
+    }
+    
+    // Show toast notification
+    const toast = document.getElementById('toast-quick-update');
+    if (toast) {
+      toast.classList.remove('opacity-0', 'pointer-events-none');
+      setTimeout(() => {
+        toast.classList.add('opacity-0', 'pointer-events-none');
+      }, 2200);
+    }
+  };
+
+  // Button Novo Grupo Trigger
+  document.getElementById('btn-novo-grupo').addEventListener('click', () => {
+    // Navigate straight to modifiers tab for context
+    tabModBtn.click();
+    const toast = document.getElementById('toast-quick-update');
+    if (toast) {
+      toast.querySelector('span:last-child').textContent = 'Abrindo assistente de novo grupo...';
+      toast.classList.remove('opacity-0', 'pointer-events-none');
+      setTimeout(() => {
+        toast.classList.add('opacity-0', 'pointer-events-none');
+        toast.querySelector('span:last-child').textContent = 'Cardápio atualizado no POS e Mesas';
+      }, 2000);
+    }
+  });
+</script></main><nav class="fixed bottom-0 w-full z-50 pb-safe bg-surface/85 backdrop-blur-xl shadow-[0_-2px_12px_rgba(0,0,0,0.05)]" data-active-classes="text-primary font-bold"><div class="flex items-center justify-around h-16 px-space-xs"><a class="min-w-[44px] min-h-[44px] flex flex-col items-center justify-center gap-0.5 text-on-surface-variant hover:text-on-surface" data-path="cardapio-digital" href="#"><span class="material-symbols-outlined text-[22px]">menu_book</span><span class="font-label-sm text-label-sm">Cardápio</span></a><a class="min-w-[44px] min-h-[44px] flex flex-col items-center justify-center gap-0.5 text-on-surface-variant hover:text-on-surface relative" data-path="pedidos-ativos" href="#"><span class="material-symbols-outlined text-[22px]">receipt_long</span><span class="font-label-sm text-label-sm">Comanda</span><span class="absolute top-1 right-2 w-2 h-2 rounded-full bg-secondary-container"></span></a><a class="min-w-[44px] min-h-[44px] flex flex-col items-center justify-center gap-0.5 text-on-surface-variant hover:text-on-surface" data-path="mesas-pos" href="#"><span class="material-symbols-outlined text-[22px]">grid_view</span><span class="font-label-sm text-label-sm">Mesas</span></a><a class="min-w-[44px] min-h-[44px] flex flex-col items-center justify-center gap-0.5 text-on-surface-variant hover:text-on-surface" data-path="gestao-cozinha" href="#"><span class="material-symbols-outlined text-[22px]">soup_kitchen</span><span class="font-label-sm text-label-sm">KDS</span></a><a aria-current="page" class="min-w-[44px] min-h-[44px] flex flex-col items-center justify-center gap-0.5 text-primary font-bold" data-path="gestao-backoffice" href="#"><span class="material-symbols-outlined text-[22px]">admin_panel_settings</span><span class="font-label-sm text-label-sm">Gestão</span></a></div></nav></body></html>

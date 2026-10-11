@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&amp;family=Plus+Jakarta+Sans:wght@600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{"colors":{"on-surface":"#111c2d","on-primary":"#ffffff","on-tertiary-container":"#fffbff","surface-variant":"#d8e3fb","error":"#ba1a1a","error-container":"#ffdad6","inverse-on-surface":"#ecf1ff","on-tertiary":"#ffffff","on-error":"#ffffff","background":"#f9f9ff","tertiary-fixed-dim":"#ffb77d","on-secondary-fixed-variant":"#783200","surface-container-highest":"#d8e3fb","on-surface-variant":"#5a4138","secondary":"#9d4300","secondary-fixed":"#ffdbca","surface-bright":"#f9f9ff","tertiary-container":"#b15f00","secondary-fixed-dim":"#ffb690","on-primary-container":"#fffbff","primary-fixed-dim":"#ffb599","surface-container-high":"#dee8ff","surface-container-lowest":"#ffffff","primary":"#a33900","primary-fixed":"#ffdbce","inverse-primary":"#ffb599","surface":"#f9f9ff","on-secondary":"#ffffff","on-primary-fixed":"#370e00","surface-dim":"#cfdaf2","on-background":"#111c2d","on-error-container":"#93000a","secondary-container":"#fd761a","surface-container-low":"#f0f3ff","on-primary-fixed-variant":"#7f2b00","tertiary":"#8d4b00","on-secondary-fixed":"#341100","outline-variant":"#e2bfb2","tertiary-fixed":"#ffdcc3","on-tertiary-fixed-variant":"#6e3900","on-secondary-container":"#5c2400","surface-tint":"#a73a00","outline":"#8e7166","surface-container":"#e7eeff","on-tertiary-fixed":"#2f1500","inverse-surface":"#263143","primary-container":"#cc4900"},"borderRadius":{"DEFAULT":"0.25rem","lg":"0.5rem","xl":"0.75rem","full":"9999px"},"spacing":{"space-2xs":"0.125rem","space-2xl":"3rem","margin-desktop":"2.5rem","space-xs":"0.25rem","margin":"1rem","space-xl":"2rem","space-lg":"1.5rem","space-sm":"0.5rem","margin-tablet":"1.5rem","gutter":"1rem","space-md":"1rem","gutter-desktop":"1.5rem"},"fontFamily":{"headline-lg-mobile":["Plus Jakarta Sans"],"headline-sm":["Plus Jakarta Sans"],"label-md":["Inter"],"body-lg":["Inter"],"label-lg":["Inter"],"body-md":["Inter"],"headline-md":["Plus Jakarta Sans"],"label-sm":["Inter"],"body-sm":["Inter"],"price-display":["Plus Jakarta Sans"],"headline-lg":["Plus Jakarta Sans"],"headline-xl":["Plus Jakarta Sans"],"headline-xl-mobile":["Plus Jakarta Sans"]},"fontSize":{"headline-lg-mobile":["24px",{"lineHeight":"32px","fontWeight":"700"}],"headline-sm":["18px",{"lineHeight":"24px","fontWeight":"600"}],"label-md":["12px",{"lineHeight":"16px","fontWeight":"600"}],"body-lg":["16px",{"lineHeight":"24px","fontWeight":"400"}],"label-lg":["14px",{"lineHeight":"20px","fontWeight":"600"}],"body-md":["14px",{"lineHeight":"20px","fontWeight":"400"}],"headline-md":["24px",{"lineHeight":"32px","fontWeight":"700"}],"label-sm":["11px",{"lineHeight":"14px","letterSpacing":"0.025em","fontWeight":"600"}],"body-sm":["12px",{"lineHeight":"16px","fontWeight":"400"}],"price-display":["20px",{"lineHeight":"24px","fontWeight":"700"}],"headline-lg":["32px",{"lineHeight":"40px","fontWeight":"700"}],"headline-xl":["40px",{"lineHeight":"48px","fontWeight":"800"}],"headline-xl-mobile":["30px",{"lineHeight":"36px","fontWeight":"800"}]}}}};</script></head><body class="bg-background font-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-full w-72 bg-surface-container-low z-50 flex flex-col py-space-md shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="px-space-lg flex items-center gap-space-sm mb-space-xl"><img alt="GastroMenu Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAcEkpYVURTX64BOzP7Tm0uFNxVHwPvzUSAyixD_hX3brdChdodqbcacZDjTIr52pf7W1HZbujxfRCnT43u828gLh0kXN_Lbn6W-I36kRpb1MHXlwu3li2Z2FGdT9mrYTNaj2AzdfxA7tdJUXpWxj-zDu8_2wQ0l4GNaX6hXCgbqSlslq-eKhyOaK-GMlBWv3bByEXG8Gc-OrpWg_KBiMxgzEKHWEeW_sRARlat1eefhH5HCQrd-b4b"/><div class="flex flex-col"><span class="font-headline-sm text-headline-sm text-on-surface leading-none">GastroMenu</span><span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider mt-space-2xs">Backoffice POS</span></div></div><div class="px-space-md mb-space-sm"><span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider px-space-sm">Operação &amp; Cardápio</span></div><nav class="flex-1 px-space-md flex flex-col gap-space-xs" data-active-classes="bg-primary text-on-primary font-label-lg shadow-sm"><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg font-label-lg text-label-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="visao-geral" href="#"><span class="material-symbols-outlined text-lg">dashboard</span>Visão Geral</a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg font-label-lg text-label-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="cardapio-e-produtos" href="#"><span class="material-symbols-outlined text-lg">restaurant_menu</span>Cardápio &amp; Produtos</a><a aria-current="page" class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg transition-all bg-primary text-on-primary font-label-lg shadow-sm" data-path="categorias" href="#"><span class="material-symbols-outlined text-lg">category</span>Categorias</a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg font-label-lg text-label-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="grupos-de-complementos" href="#"><span class="material-symbols-outlined text-lg">library_add</span>Grupos de Complementos</a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg font-label-lg text-label-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="pedidos-ao-vivo" href="#"><span class="material-symbols-outlined text-lg">receipt_long</span>Pedidos ao Vivo</a><div class="my-space-sm"><span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider px-space-sm">Sistema</span></div><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg font-label-lg text-label-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="configuracoes" href="#"><span class="material-symbols-outlined text-lg">settings</span>Configurações</a></nav><div class="px-space-md pt-space-sm"><div class="bg-surface-container p-space-sm rounded-lg flex items-center gap-space-sm"><span class="material-symbols-outlined text-primary text-xl">storefront</span><div><p class="font-label-md text-label-md text-on-surface">Bistrô Central</p><p class="font-label-sm text-label-sm text-on-surface-variant">Terminal 01 • Ativo</p></div></div></div></aside><div class="pl-72"><header class="fixed top-0 left-72 right-0 h-16 bg-surface/85 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-40 flex items-center justify-between px-space-xl"><div class="flex items-center gap-space-lg"><div class="flex items-center gap-space-xs bg-surface-container-lowest px-space-sm py-space-xs rounded-full shadow-[0_1px_4px_rgba(0,0,0,0.04)]"><span class="w-2.5 h-2.5 rounded-full bg-secondary-container animate-pulse"></span><span class="font-label-sm text-label-sm text-on-surface font-semibold">Aberto</span><span class="font-label-sm text-label-sm text-on-surface-variant">• Aceitando pedidos</span></div><div class="relative flex items-center w-72"><span class="material-symbols-outlined absolute left-space-sm text-on-surface-variant text-base">search</span><input class="w-full pl-9 pr-space-md py-1.5 bg-surface-container-lowest rounded-lg font-body-sm text-body-sm text-on-surface placeholder:text-on-surface-variant focus:outline-none focus:ring-1 focus:ring-primary shadow-[0_1px_4px_rgba(0,0,0,0.03)]" placeholder="Buscar pedidos, itens, mesas..." type="text"/></div></div><div class="flex items-center gap-space-md"><button class="relative p-2 text-on-surface-variant hover:text-on-surface transition-colors" type="button"><span class="material-symbols-outlined text-xl">notifications</span><span class="absolute top-1.5 right-1.5 w-2 h-2 bg-primary rounded-full"></span></button><div class="flex items-center gap-space-sm pl-space-sm"><img alt="Profile" class="w-8 h-8 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDpLFPZ3mtpYp3D68Ta2KY1w_6mTYiGRqc9bQBYgOdCZVbJietBNJ3BgI4x4MV_mAQSPYGg6xgxgsKHONSjpbEnS4wpbHk4SKhj8xehzvj4x3RXY7OtDLbFUWXK0rvqWJQoHpWxZslNNKB5SWIgf1eymxFv_2Ehzc7EOSOYh9LD271w6RY10hU6xJiyV2QoTqSphub4zpl6r8HxmDVqVG58c3PeVRCIPymA9p3VyJCtnOWB00d77h6M"/><div class="hidden md:flex flex-col text-left"><span class="font-label-md text-label-md text-on-surface leading-tight">Gerente de Loja</span><span class="font-label-sm text-label-sm text-on-surface-variant leading-tight">Turno Almoço</span></div></div></div></header><main class="relative pt-16 w-full px-margin-desktop"><div class="flex flex-col w-full pb-space-2xl">
+<!-- Top Bar / Quick Operational Overview -->
+<div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-space-md py-space-lg">
+<div class="flex flex-col">
+<div class="flex items-center gap-space-xs text-secondary font-label-sm uppercase tracking-wider mb-space-2xs">
+<span class="material-symbols-outlined text-sm">tune</span>
+<span>Configuração Estrutural do Cardápio</span>
+</div>
+<div class="flex items-baseline gap-space-sm">
+<h1 class="font-headline-lg text-headline-lg text-on-surface">Categorias &amp; Modificadores</h1>
+<span class="font-body-sm text-on-surface-variant font-medium">(Bistrô Central • Versão de Produção)</span>
+</div>
+</div>
+<!-- Global Actions & Status Pill -->
+<div class="flex items-center gap-space-sm self-stretch md:self-auto">
+<div class="hidden xl:flex items-center gap-space-xs px-space-md py-space-xs bg-surface-container-high rounded-full">
+<span class="w-2 h-2 rounded-full bg-secondary-container"></span>
+<span class="font-label-sm text-label-sm text-on-surface">Sincronizado com KDS &amp; PDV</span>
+</div>
+<button class="flex-1 md:flex-none flex items-center justify-center gap-space-xs px-space-md py-space-sm bg-surface-container rounded-lg font-label-lg text-label-lg text-on-surface hover:bg-surface-container-high transition-colors" type="button">
+<span class="material-symbols-outlined text-base">history</span>
+<span>Histórico</span>
+</button>
+<button class="flex-1 md:flex-none flex items-center justify-center gap-space-xs px-space-lg py-space-sm bg-primary text-on-primary rounded-lg font-label-lg text-label-lg hover:bg-secondary transition-all shadow-md" id="btn-new-group-modal" type="button">
+<span class="material-symbols-outlined text-lg">add_circle</span>
+<span>Novo Grupo ou Categoria</span>
+</button>
+</div>
+</div>
+<!-- Realtime System Alert / Rules Architecture Helper -->
+<div class="mb-space-xl p-space-md bg-surface-container-low rounded-xl flex flex-col md:flex-row items-start md:items-center justify-between gap-space-md shadow-sm">
+<div class="flex items-start gap-space-md">
+<div class="p-space-sm bg-primary-fixed text-on-primary-fixed rounded-lg flex items-center justify-center">
+<span class="material-symbols-outlined text-2xl">account_tree</span>
+</div>
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm text-on-surface">Arquitetura de Complementos Hierárquica</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant max-w-3xl mt-0.5">
+          Os grupos de modificadores vinculados a categorias aplicam-se a todos os itens associados de forma automática, economizando até 80% do tempo de cadastro e prevenindo erros na cozinha.
+        </p>
+</div>
+</div>
+<div class="flex items-center gap-space-sm">
+<div class="flex flex-col text-right">
+<span class="font-label-md text-label-md text-primary font-bold">5 Categorias</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">14 Grupos Ativos</span>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant text-xl">verified</span>
+</div>
+</div>
+<!-- Two-Column Master Control Grid -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter-desktop items-start">
+<!-- PANEL 1: Categorias Principais (5 cols) -->
+<div class="lg:col-span-5 flex flex-col gap-space-md">
+<div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-xl">folder_managed</span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Painel de Categorias</h2>
+</div>
+<span class="px-space-sm py-0.5 rounded-full bg-surface-container text-on-surface-variant font-label-sm text-label-sm">5 registradas</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+          Arraste pelas alças laterais para alterar a ordem visual dos grupos no cardápio digital do cliente e no visor do garçom.
+        </p>
+<!-- Category Drag List -->
+<div class="flex flex-col gap-space-xs pt-space-xs" id="category-list">
+<!-- Category Item 1 -->
+<div class="flex items-center justify-between p-space-sm rounded-lg bg-surface-container-low hover:bg-surface-container transition-all group cursor-pointer shadow-sm">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-outline cursor-grab active:cursor-grabbing text-lg select-none">drag_indicator</span>
+<div class="w-9 h-9 rounded-lg bg-primary/10 text-primary flex items-center justify-center font-bold">
+<span class="material-symbols-outlined text-xl">lunch_dining</span>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-space-xs">
+<span class="font-label-lg text-label-lg text-on-surface font-semibold">Lanches Artesanais</span>
+<span class="px-1.5 py-0.5 rounded bg-surface-container-high text-on-surface font-label-sm text-[10px]">18 itens</span>
+</div>
+<div class="flex items-center gap-space-xs text-on-surface-variant font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-xs">schedule</span>
+<span>18:00 - 23:45 (Noite)</span>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-space-sm">
+<label class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer" type="checkbox"/>
+<div class="w-9 h-5 bg-surface-variant peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-4 after:w-4 after:transition-all peer-checked:bg-primary"></div>
+</label>
+<button class="p-1 text-on-surface-variant hover:text-on-surface rounded">
+<span class="material-symbols-outlined text-base">more_vert</span>
+</button>
+</div>
+</div>
+<!-- Category Item 2 -->
+<div class="flex items-center justify-between p-space-sm rounded-lg bg-surface-container-low hover:bg-surface-container transition-all group cursor-pointer shadow-sm">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-outline cursor-grab active:cursor-grabbing text-lg select-none">drag_indicator</span>
+<div class="w-9 h-9 rounded-lg bg-secondary/10 text-secondary flex items-center justify-center font-bold">
+<span class="material-symbols-outlined text-xl">skillet</span>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-space-xs">
+<span class="font-label-lg text-label-lg text-on-surface font-semibold">Pratos Executivos</span>
+<span class="px-1.5 py-0.5 rounded bg-surface-container-high text-on-surface font-label-sm text-[10px]">9 itens</span>
+</div>
+<div class="flex items-center gap-space-xs text-on-surface-variant font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-xs">wb_sunny</span>
+<span>11:30 - 15:30 (Almoço)</span>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-space-sm">
+<label class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer" type="checkbox"/>
+<div class="w-9 h-5 bg-surface-variant peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-4 after:w-4 after:transition-all peer-checked:bg-primary"></div>
+</label>
+<button class="p-1 text-on-surface-variant hover:text-on-surface rounded">
+<span class="material-symbols-outlined text-base">more_vert</span>
+</button>
+</div>
+</div>
+<!-- Category Item 3 -->
+<div class="flex items-center justify-between p-space-sm rounded-lg bg-surface-container-low hover:bg-surface-container transition-all group cursor-pointer shadow-sm">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-outline cursor-grab active:cursor-grabbing text-lg select-none">drag_indicator</span>
+<div class="w-9 h-9 rounded-lg bg-tertiary-container/15 text-tertiary-container flex items-center justify-center font-bold">
+<span class="material-symbols-outlined text-xl">tapas</span>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-space-xs">
+<span class="font-label-lg text-label-lg text-on-surface font-semibold">Porções &amp; Aperitivos</span>
+<span class="px-1.5 py-0.5 rounded bg-surface-container-high text-on-surface font-label-sm text-[10px]">12 itens</span>
+</div>
+<div class="flex items-center gap-space-xs text-on-surface-variant font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-xs">all_inclusive</span>
+<span>Todos os horários</span>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-space-sm">
+<label class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer" type="checkbox"/>
+<div class="w-9 h-5 bg-surface-variant peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-4 after:w-4 after:transition-all peer-checked:bg-primary"></div>
+</label>
+<button class="p-1 text-on-surface-variant hover:text-on-surface rounded">
+<span class="material-symbols-outlined text-base">more_vert</span>
+</button>
+</div>
+</div>
+<!-- Category Item 4 -->
+<div class="flex items-center justify-between p-space-sm rounded-lg bg-surface-container-low hover:bg-surface-container transition-all group cursor-pointer shadow-sm">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-outline cursor-grab active:cursor-grabbing text-lg select-none">drag_indicator</span>
+<div class="w-9 h-9 rounded-lg bg-primary-container/20 text-primary-container flex items-center justify-center font-bold">
+<span class="material-symbols-outlined text-xl">local_bar</span>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-space-xs">
+<span class="font-label-lg text-label-lg text-on-surface font-semibold">Bebidas &amp; Drinks</span>
+<span class="px-1.5 py-0.5 rounded bg-surface-container-high text-on-surface font-label-sm text-[10px]">24 itens</span>
+</div>
+<div class="flex items-center gap-space-xs text-on-surface-variant font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-xs">all_inclusive</span>
+<span>Todos os horários</span>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-space-sm">
+<label class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer" type="checkbox"/>
+<div class="w-9 h-5 bg-surface-variant peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-4 after:w-4 after:transition-all peer-checked:bg-primary"></div>
+</label>
+<button class="p-1 text-on-surface-variant hover:text-on-surface rounded">
+<span class="material-symbols-outlined text-base">more_vert</span>
+</button>
+</div>
+</div>
+<!-- Category Item 5 (Sobremesas - Inativo parcial) -->
+<div class="flex items-center justify-between p-space-sm rounded-lg bg-surface-container-low hover:bg-surface-container transition-all group cursor-pointer opacity-80 shadow-sm">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-outline cursor-grab active:cursor-grabbing text-lg select-none">drag_indicator</span>
+<div class="w-9 h-9 rounded-lg bg-surface-container-highest text-on-surface flex items-center justify-center font-bold">
+<span class="material-symbols-outlined text-xl">icecream</span>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-space-xs">
+<span class="font-label-lg text-label-lg text-on-surface font-semibold">Sobremesas</span>
+<span class="px-1.5 py-0.5 rounded bg-surface-container-high text-on-surface font-label-sm text-[10px]">6 itens</span>
+</div>
+<div class="flex items-center gap-space-xs text-on-surface-variant font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-xs">schedule</span>
+<span>Pós-refeição (12:00+)</span>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-space-sm">
+<label class="relative inline-flex items-center cursor-pointer">
+<input class="sr-only peer" type="checkbox"/>
+<div class="w-9 h-5 bg-surface-variant peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-4 after:w-4 after:transition-all peer-checked:bg-primary"></div>
+</label>
+<button class="p-1 text-on-surface-variant hover:text-on-surface rounded">
+<span class="material-symbols-outlined text-base">more_vert</span>
+</button>
+</div>
+</div>
+</div>
+<button class="w-full mt-space-sm py-space-sm bg-surface-container text-primary rounded-lg font-label-lg text-label-lg flex items-center justify-center gap-space-xs hover:bg-surface-container-high transition-colors" type="button">
+<span class="material-symbols-outlined text-lg">add</span>
+<span>Adicionar Categoria de Cardápio</span>
+</button>
+</div>
+<!-- Quick Metrics Mini-Panel -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex items-center justify-between">
+<div class="flex items-center gap-space-md">
+<div class="p-space-sm bg-secondary-fixed text-on-secondary-fixed rounded-lg">
+<span class="material-symbols-outlined text-2xl">insights</span>
+</div>
+<div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Rentabilidade de Adicionais</span>
+<p class="font-headline-sm text-headline-sm text-on-surface">+R$ 8.420 / mês</p>
+</div>
+</div>
+<span class="text-secondary font-label-sm font-semibold bg-secondary-fixed/50 px-2.5 py-1 rounded-full">+18.4% vs mês ant.</span>
+</div>
+</div>
+<!-- PANEL 2: Construtor de Regras de Componentes & Complementos (7 cols) -->
+<div class="lg:col-span-7 flex flex-col gap-space-md">
+<!-- Educational Rules Spec Header -->
+<div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm flex flex-col gap-space-md">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-sm">
+<div>
+<span class="font-label-sm text-label-sm text-secondary font-bold uppercase tracking-wider">Regras &amp; Validação</span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Construtor de Regras de Complementos</h2>
+</div>
+<div class="flex items-center gap-space-xs">
+<button class="px-space-md py-space-xs bg-surface-container rounded-lg font-label-sm text-label-sm text-on-surface hover:bg-surface-container-high transition-colors flex items-center gap-1" type="button">
+<span class="material-symbols-outlined text-sm">link</span>
+<span>Vincular em Lote</span>
+</button>
+</div>
+</div>
+<!-- Legend / Typology Pill Badges -->
+<div class="grid grid-cols-2 sm:grid-cols-4 gap-space-xs p-space-sm bg-surface-container-low rounded-lg">
+<div class="flex items-center gap-1.5 p-1">
+<span class="w-2.5 h-2.5 rounded-full bg-inverse-surface"></span>
+<span class="font-label-sm text-label-sm text-on-surface font-semibold">REQUERIDO (Obrig.)</span>
+</div>
+<div class="flex items-center gap-1.5 p-1">
+<span class="w-2.5 h-2.5 rounded-full bg-secondary-container"></span>
+<span class="font-label-sm text-label-sm text-on-surface font-semibold">OPCIONAL (Livre)</span>
+</div>
+<div class="flex items-center gap-1.5 p-1">
+<span class="w-2.5 h-2.5 rounded-full bg-primary"></span>
+<span class="font-label-sm text-label-sm text-on-surface font-semibold">COMBO DESCONTO</span>
+</div>
+<div class="flex items-center gap-1.5 p-1">
+<span class="w-2.5 h-2.5 rounded-full bg-outline"></span>
+<span class="font-label-sm text-label-sm text-on-surface font-semibold">ESCALA / NÍVEL</span>
+</div>
+</div>
+<!-- Group Table / Configuration List -->
+<div class="flex flex-col gap-space-md pt-space-xs">
+<!-- RULE CARD 1: Escolha do Pão (REQUERIDO) -->
+<div class="p-space-md bg-surface-container-low rounded-xl flex flex-col gap-space-sm transition-all shadow-sm">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-xs">
+<div class="flex items-center gap-space-sm">
+<span class="px-space-xs py-0.5 rounded bg-inverse-surface text-inverse-on-surface font-label-sm text-[11px] font-bold uppercase tracking-wider">
+                  REQUERIDO
+                </span>
+<span class="font-headline-sm text-headline-sm text-on-surface font-semibold">Escolha do Pão</span>
+</div>
+<div class="flex items-center gap-space-xs">
+<span class="text-on-surface-variant font-label-sm text-label-sm">Mín: 1 • Máx: 1 opção</span>
+<button class="p-1 text-on-surface-variant hover:text-on-surface rounded">
+<span class="material-symbols-outlined text-base">edit</span>
+</button>
+</div>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              Exatamente uma opção deve ser selecionada pelo cliente antes de prosseguir com o pedido.
+            </p>
+<!-- Modifier Items preview -->
+<div class="flex flex-wrap gap-space-xs py-space-2xs">
+<span class="px-space-sm py-1 rounded bg-surface-container-lowest font-body-sm text-body-sm text-on-surface">Brioche Francês (+R$ 0,00)</span>
+<span class="px-space-sm py-1 rounded bg-surface-container-lowest font-body-sm text-body-sm text-on-surface">Australiano c/ Mel (+R$ 2,50)</span>
+<span class="px-space-sm py-1 rounded bg-surface-container-lowest font-body-sm text-body-sm text-on-surface">Sem Glúten (+R$ 4,00)</span>
+</div>
+<!-- Toggles and Kitchen routing -->
+<div class="pt-space-xs flex flex-wrap items-center justify-between gap-space-sm text-on-surface">
+<div class="flex items-center gap-space-md">
+<label class="flex items-center gap-space-xs cursor-pointer select-none">
+<input checked="" class="w-4 h-4 rounded text-primary focus:ring-primary accent-primary" type="checkbox"/>
+<span class="font-label-sm text-label-sm">Ativo no Cardápio</span>
+</label>
+<label class="flex items-center gap-space-xs cursor-pointer select-none opacity-50">
+<input class="w-4 h-4 rounded text-primary accent-primary" disabled="" type="checkbox"/>
+<span class="font-label-sm text-label-sm">Permitir Múltiplos</span>
+</label>
+<label class="flex items-center gap-space-xs cursor-pointer select-none">
+<input checked="" class="w-4 h-4 rounded text-primary focus:ring-primary accent-primary" type="checkbox"/>
+<span class="font-label-sm text-label-sm">Enviar ao KDS</span>
+</label>
+</div>
+<span class="font-label-sm text-label-sm text-primary font-semibold bg-primary-fixed/40 px-2 py-0.5 rounded">
+                Vinculado a: Lanches Artesanais
+              </span>
+</div>
+</div>
+<!-- RULE CARD 2: Turbine seu Lanche (OPCIONAL) -->
+<div class="p-space-md bg-surface-container-low rounded-xl flex flex-col gap-space-sm transition-all shadow-sm">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-xs">
+<div class="flex items-center gap-space-sm">
+<span class="px-space-xs py-0.5 rounded bg-secondary-container text-on-secondary-container font-label-sm text-[11px] font-bold uppercase tracking-wider">
+                  OPCIONAL
+                </span>
+<span class="font-headline-sm text-headline-sm text-on-surface font-semibold">Turbine seu Lanche (Bacon, Queijos)</span>
+</div>
+<div class="flex items-center gap-space-xs">
+<span class="text-on-surface-variant font-label-sm text-label-sm">Mín: 0 • Máx: 6 opções</span>
+<button class="p-1 text-on-surface-variant hover:text-on-surface rounded">
+<span class="material-symbols-outlined text-base">edit</span>
+</button>
+</div>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              Adicionais avulsos. Cliente escolhe se quer habilitar ou ignorar sem bloquear a finalização.
+            </p>
+<!-- Modifier Items preview -->
+<div class="flex flex-wrap gap-space-xs py-space-2xs">
+<span class="px-space-sm py-1 rounded bg-surface-container-lowest font-body-sm text-body-sm text-on-surface">Bacon Crocante (+R$ 5,00)</span>
+<span class="px-space-sm py-1 rounded bg-surface-container-lowest font-body-sm text-body-sm text-on-surface">Cheddar Inglês Melt (+R$ 4,50)</span>
+<span class="px-space-sm py-1 rounded bg-surface-container-lowest font-body-sm text-body-sm text-on-surface">Cebola Caramelizada (+R$ 3,50)</span>
+<span class="px-space-sm py-1 rounded bg-surface-container-lowest font-body-sm text-body-sm text-on-surface">Maionese Trufada (+R$ 4,00)</span>
+</div>
+<!-- Toggles and Kitchen routing -->
+<div class="pt-space-xs flex flex-wrap items-center justify-between gap-space-sm text-on-surface">
+<div class="flex items-center gap-space-md">
+<label class="flex items-center gap-space-xs cursor-pointer select-none">
+<input checked="" class="w-4 h-4 rounded text-primary focus:ring-primary accent-primary" type="checkbox"/>
+<span class="font-label-sm text-label-sm">Ativo no Cardápio</span>
+</label>
+<label class="flex items-center gap-space-xs cursor-pointer select-none">
+<input checked="" class="w-4 h-4 rounded text-primary focus:ring-primary accent-primary" type="checkbox"/>
+<span class="font-label-sm text-label-sm">Permitir Múltiplos</span>
+</label>
+<label class="flex items-center gap-space-xs cursor-pointer select-none">
+<input checked="" class="w-4 h-4 rounded text-primary focus:ring-primary accent-primary" type="checkbox"/>
+<span class="font-label-sm text-label-sm">Enviar ao KDS</span>
+</label>
+</div>
+<span class="font-label-sm text-label-sm text-primary font-semibold bg-primary-fixed/40 px-2 py-0.5 rounded">
+                Vinculado a: Lanches + Porções
+              </span>
+</div>
+</div>
+<!-- RULE CARD 3: Bebidas no Combo (OPCIONAL COM DESCONTO) -->
+<div class="p-space-md bg-surface-container-low rounded-xl flex flex-col gap-space-sm transition-all shadow-sm">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-xs">
+<div class="flex items-center gap-space-sm">
+<span class="px-space-xs py-0.5 rounded bg-primary text-on-primary font-label-sm text-[11px] font-bold uppercase tracking-wider">
+                  OPCIONAL C/ DESCONTO
+                </span>
+<span class="font-headline-sm text-headline-sm text-on-surface font-semibold">Bebidas no Combo</span>
+</div>
+<div class="flex items-center gap-space-xs">
+<span class="text-on-surface-variant font-label-sm text-label-sm">Mín: 0 • Máx: 2 opções</span>
+<button class="p-1 text-on-surface-variant hover:text-on-surface rounded">
+<span class="material-symbols-outlined text-base">edit</span>
+</button>
+</div>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              Produtos com precificação bonificada automática se acompanhados de itens de pratos principais.
+            </p>
+<!-- Modifier Items preview -->
+<div class="flex flex-wrap gap-space-xs py-space-2xs">
+<span class="px-space-sm py-1 rounded bg-surface-container-lowest font-body-sm text-body-sm text-on-surface">Refrigerante Lata (De R$ 7,50 por R$ 4,90)</span>
+<span class="px-space-sm py-1 rounded bg-surface-container-lowest font-body-sm text-body-sm text-on-surface">Suco Natural Laranja (De R$ 9,00 por R$ 6,00)</span>
+</div>
+<!-- Toggles and Kitchen routing -->
+<div class="pt-space-xs flex flex-wrap items-center justify-between gap-space-sm text-on-surface">
+<div class="flex items-center gap-space-md">
+<label class="flex items-center gap-space-xs cursor-pointer select-none">
+<input checked="" class="w-4 h-4 rounded text-primary focus:ring-primary accent-primary" type="checkbox"/>
+<span class="font-label-sm text-label-sm">Ativo no Cardápio</span>
+</label>
+<label class="flex items-center gap-space-xs cursor-pointer select-none">
+<input checked="" class="w-4 h-4 rounded text-primary focus:ring-primary accent-primary" type="checkbox"/>
+<span class="font-label-sm text-label-sm">Permitir Múltiplos</span>
+</label>
+<label class="flex items-center gap-space-xs cursor-pointer select-none">
+<input class="w-4 h-4 rounded text-primary focus:ring-primary accent-primary" type="checkbox"/>
+<span class="font-label-sm text-label-sm">Enviar ao Bar / Copa</span>
+</label>
+</div>
+<span class="font-label-sm text-label-sm text-secondary font-semibold bg-secondary-fixed/40 px-2 py-0.5 rounded">
+                Vinculado a: Pratos + Lanches
+              </span>
+</div>
+</div>
+<!-- RULE CARD 4: Nível de Pimenta (OPCIONAL) -->
+<div class="p-space-md bg-surface-container-low rounded-xl flex flex-col gap-space-sm transition-all shadow-sm">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-xs">
+<div class="flex items-center gap-space-sm">
+<span class="px-space-xs py-0.5 rounded bg-surface-container-highest text-on-surface-variant font-label-sm text-[11px] font-bold uppercase tracking-wider">
+                  OPCIONAL
+                </span>
+<span class="font-headline-sm text-headline-sm text-on-surface font-semibold">Nível de Pimenta</span>
+</div>
+<div class="flex items-center gap-space-xs">
+<span class="text-on-surface-variant font-label-sm text-label-sm">Mín: 0 • Máx: 1 opção</span>
+<button class="p-1 text-on-surface-variant hover:text-on-surface rounded">
+<span class="material-symbols-outlined text-base">edit</span>
+</button>
+</div>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              Instrução de preparo culinário sem acréscimo de custo financeiro para o cliente final.
+            </p>
+<!-- Modifier Items preview -->
+<div class="flex flex-wrap gap-space-xs py-space-2xs">
+<span class="px-space-sm py-1 rounded bg-surface-container-lowest font-body-sm text-body-sm text-on-surface">Sem Pimenta (Padrão)</span>
+<span class="px-space-sm py-1 rounded bg-surface-container-lowest font-body-sm text-body-sm text-on-surface">Leve (Jalapeño suave)</span>
+<span class="px-space-sm py-1 rounded bg-surface-container-lowest font-body-sm text-body-sm text-on-surface">Fogo Alto (Habanero &amp; Chilli)</span>
+</div>
+<!-- Toggles and Kitchen routing -->
+<div class="pt-space-xs flex flex-wrap items-center justify-between gap-space-sm text-on-surface">
+<div class="flex items-center gap-space-md">
+<label class="flex items-center gap-space-xs cursor-pointer select-none">
+<input checked="" class="w-4 h-4 rounded text-primary focus:ring-primary accent-primary" type="checkbox"/>
+<span class="font-label-sm text-label-sm">Ativo no Cardápio</span>
+</label>
+<label class="flex items-center gap-space-xs cursor-pointer select-none opacity-50">
+<input class="w-4 h-4 rounded text-primary accent-primary" disabled="" type="checkbox"/>
+<span class="font-label-sm text-label-sm">Permitir Múltiplos</span>
+</label>
+<label class="flex items-center gap-space-xs cursor-pointer select-none">
+<input checked="" class="w-4 h-4 rounded text-primary focus:ring-primary accent-primary" type="checkbox"/>
+<span class="font-label-sm text-label-sm">Alerta Sonoro KDS</span>
+</label>
+</div>
+<span class="font-label-sm text-label-sm text-primary font-semibold bg-primary-fixed/40 px-2 py-0.5 rounded">
+                Vinculado a: Todas as Porções
+              </span>
+</div>
+</div>
+</div>
+<!-- Add Modifier Group CTA Button -->
+<button class="w-full py-space-sm bg-primary text-on-primary rounded-lg font-label-lg text-label-lg flex items-center justify-center gap-space-xs hover:bg-secondary transition-colors shadow-sm" id="btn-add-group" type="button">
+<span class="material-symbols-outlined text-lg">library_add</span>
+<span>Criar Novo Grupo de Modificadores</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Quick Bulk Association Action Bar -->
+<div class="mt-space-xl p-space-lg bg-surface-container-lowest rounded-xl shadow-sm flex flex-col md:flex-row items-center justify-between gap-space-md">
+<div class="flex items-center gap-space-md">
+<div class="w-12 h-12 rounded-xl bg-secondary/10 flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-2xl">device_hub</span>
+</div>
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm text-on-surface">Associação em Massa para o Cardápio</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+          Vincule grupos de acompanhamentos (ex: 'Ponto da Carne', 'Molhos Especiais') a categorias completas com um só clique.
+        </p>
+</div>
+</div>
+<div class="flex items-center gap-space-sm w-full md:w-auto">
+<button class="flex-1 md:flex-none px-space-lg py-space-sm bg-surface-container rounded-lg font-label-lg text-label-lg text-on-surface hover:bg-surface-container-high transition-colors" type="button">
+        Ver Mapeamento Geral
+      </button>
+<button class="flex-1 md:flex-none px-space-lg py-space-sm bg-secondary text-on-secondary rounded-lg font-label-lg text-label-lg hover:bg-secondary-container transition-colors shadow-sm" type="button">
+        Executar Vinculação Rápida
+      </button>
+</div>
+</div>
+</div>
+<script>
+  // Simple toast trigger on modifier additions
+  const btnAdd = document.getElementById('btn-add-group');
+  const btnModal = document.getElementById('btn-new-group-modal');
+  
+  function triggerAction() {
+    const alertDiv = document.createElement('div');
+    alertDiv.className = 'fixed bottom-6 right-6 z-50 flex items-center gap-2 px-4 py-3 bg-inverse-surface text-inverse-on-surface rounded-xl shadow-xl transition-all duration-300 transform translate-y-0';
+    alertDiv.innerHTML = '<span class="material-symbols-outlined text-secondary-container text-sm">check_circle</span><span class="font-label-md text-label-md">Assistente de Criação pronto para novas regras.</span>';
+    document.body.appendChild(alertDiv);
+    setTimeout(() => {
+      alertDiv.style.opacity = '0';
+      setTimeout(() => alertDiv.remove(), 400);
+    }, 2800);
+  }
+
+  if(btnAdd) btnAdd.addEventListener('click', triggerAction);
+  if(btnModal) btnModal.addEventListener('click', triggerAction);
+</script></main></div></body></html>
