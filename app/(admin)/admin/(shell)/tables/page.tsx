@@ -1,12 +1,24 @@
-export default function AdminTablesPage() {
+import { TableManager } from "@/features/admin/components/table-manager";
+import { adminApi } from "@/lib/api/admin";
+
+export const instant = false;
+
+export default async function AdminTablesPage() {
+  const [tables, openSessions, restaurant] = await Promise.all([
+    adminApi.tables.list(),
+    adminApi.sessions.open(),
+    adminApi.restaurant.get(),
+  ]);
+
+  const menuHost = process.env.NEXT_PUBLIC_MENU_HOST ?? "menu.localhost";
+  const menuBaseUrl = menuHost.includes("localhost") ? "" : `https://${menuHost}`;
+
   return (
-    <section className="flex flex-col gap-space-lg">
-      <header>
-        <h1 className="font-display text-headline-lg text-on-surface">Mesas</h1>
-        <p className="text-body-md text-on-surface-variant">
-          Cadastre mesas e gere os QR codes.
-        </p>
-      </header>
-    </section>
+    <TableManager
+      tables={tables}
+      openSessions={openSessions}
+      slug={restaurant.slug}
+      menuBaseUrl={menuBaseUrl}
+    />
   );
 }

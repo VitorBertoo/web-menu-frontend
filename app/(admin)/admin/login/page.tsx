@@ -1,4 +1,7 @@
-export const metadata = {
+import type { Metadata } from "next";
+import { LoginForm } from "@/features/admin/components/login-form";
+
+export const metadata: Metadata = {
   title: "Entrar",
 };
 
@@ -9,9 +12,10 @@ export default function AdminLoginPage() {
         <h1 className="font-display text-headline-md text-on-surface">
           Entrar no painel
         </h1>
-        <p className="mt-space-xs text-body-sm text-on-surface-variant">
+        <p className="mt-space-xs mb-space-lg text-body-sm text-on-surface-variant">
           Acesse com o e-mail e senha do administrador.
         </p>
+        <LoginForm />
       </div>
     </main>
   );

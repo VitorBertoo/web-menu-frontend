@@ -224,3 +224,103 @@ export interface DeliveryOrderInput extends CreateOrderBase {
 }
 
 export type CreateOrderInput = DineInOrderInput | PickupOrderInput | DeliveryOrderInput;
+
+export interface LoginInput {
+  email: string;
+  password: string;
+}
+
+export interface LoginResponse {
+  token: string;
+  admin: AdminUser;
+}
+
+export interface UpdateRestaurantInput {
+  name?: string;
+  phone?: string | null;
+  isOpen?: boolean;
+  deliveryFee?: number;
+  openingHours?: OpeningHours | null;
+}
+
+export interface CategoryInput {
+  name?: string;
+  position?: number;
+}
+
+export interface ComponentInput {
+  name: string;
+  priceDelta?: number;
+  isAvailable?: boolean;
+  position?: number;
+}
+
+export interface ComponentGroupInput {
+  name: string;
+  minSelect?: number;
+  maxSelect?: number;
+  isRequired?: boolean;
+  position?: number;
+  components: ComponentInput[];
+}
+
+export interface ProductInput {
+  name?: string;
+  description?: string | null;
+  basePrice?: number;
+  imageUrl?: string | null;
+  isAvailable?: boolean;
+  categoryIds?: string[];
+  componentGroups?: ComponentGroupInput[];
+}
+
+export interface TableInput {
+  label?: string;
+  isActive?: boolean;
+}
+
+export interface OrderListQuery {
+  status?: OrderStatus;
+  type?: OrderType;
+  from?: string;
+  to?: string;
+  page?: number;
+  pageSize?: number;
+}
+
+export interface Paginated<T> {
+  items: T[];
+  total: number;
+  page: number;
+  pageSize: number;
+}
+
+export interface SalesReport {
+  summary: {
+    orders: number;
+    revenue: number;
+    canceled: number;
+    averageTicket: number;
+    byType: { type: OrderType; orders: number; revenue: number }[];
+  };
+  daily: { date: string; orders: number; revenue: number }[];
+}
+
+export interface CatalogReport {
+  topProducts: {
+    productId: string;
+    name: string;
+    quantity: number;
+    revenue: number;
+  }[];
+  topComponents: { componentId: string; name: string; quantity: number }[];
+}
+
+export interface OperationsReport {
+  prepTime: { ordersMeasured: number; averageMinutes: number };
+  occupancy: {
+    sessions: number;
+    openSessions: number;
+    averageMinutes: number;
+  };
+}
